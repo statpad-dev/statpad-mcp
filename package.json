@@ -1,0 +1,65 @@
+{
+  "name": "@statpad/mcp",
+  "version": "0.1.0",
+  "description": "MCP server that gives AI agents read access to the Statpad live sports data API.",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://statpad.dev/docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/statpad-dev/statpad-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/statpad-dev/statpad-mcp/issues"
+  },
+  "mcpName": "io.github.statpad-dev/statpad-mcp",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sports",
+    "nfl",
+    "football",
+    "soccer",
+    "statpad"
+  ],
+  "bin": {
+    "statpad-mcp": "dist/stdio.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "node scripts/clean.mjs && tsc -p tsconfig.build.json",
+    "check:pack": "npm pack --dry-run --json | node scripts/check-pack.mjs",
+    "check:deps": "node scripts/check-deps.mjs",
+    "check:live": "npm run build && node scripts/live-check.mjs",
+    "prepack": "npm run build",
+    "check": "npm run typecheck && npm test && npm run build && npm run check:pack"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "@statpad/sdk": "file:vendor/statpad-sdk-0.1.0.tgz",
+    "zod": "^4.2.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.4.0",
+    "@types/node": "^24.19.2",
+    "typescript": "~6.0.3",
+    "vitest": "^5.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

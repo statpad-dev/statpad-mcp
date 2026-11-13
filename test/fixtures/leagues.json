@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "alias": "epl",
+      "id": "01a1cca4-36d3-7698-94aa-679ece602049",
+      "level": "pro",
+      "name": "English Premier League",
+      "period_kind": "half",
+      "regulation_periods": 2,
+      "sport": "soccer"
+    },
+    {
+      "alias": "ncaaf",
+      "id": "01a1cca4-362d-79ec-ab8d-44e0952fe3f6",
+      "level": "college",
+      "name": "NCAA Division I FBS Football",
+      "period_kind": "quarter",
+      "regulation_periods": 4,
+      "sport": "football"
+    },
+    {
+      "alias": "nfl",
+      "id": "01a1cca4-362c-747d-82a8-272052985123",
+      "level": "pro",
+      "name": "National Football League",
+      "period_kind": "quarter",
+      "regulation_periods": 4,
+      "sport": "football"
+    }
+  ]
+}

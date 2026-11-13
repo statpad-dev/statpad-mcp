@@ -1,0 +1,1188 @@
+[
+  {
+    "name": "list_leagues",
+    "title": "List leagues",
+    "description": "List the leagues this API key can read, with each league's alias, name, sport and level. Pass the alias as the league argument of the other tools. Statpad covers only the leagues this returns, so a league missing here isn't available.",
+    "inputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {}
+    },
+    "outputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "leagues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "alias": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "sport": {
+                "type": "string"
+              },
+              "level": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "alias",
+              "name",
+              "sport",
+              "level"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "truncated": {
+          "description": "True when the result was trimmed to fit the response size budget.",
+          "type": "boolean"
+        },
+        "hint": {
+          "description": "How to get what the trimmed result left out.",
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "warning": {
+          "description": "Set when the account's request allowance is nearly used up.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "leagues"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "title": "List leagues",
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "find_teams",
+    "title": "Find teams",
+    "description": "Find teams in one league and get their ids. query matches the team name, market, abbreviation, or market and name together, such as \"Buffalo Bills\", ignoring case and accents. Best matches come first. Without query it lists every team in the league, trimmed to fit. Statpad has every team that has played a game since collection started in November 2026.",
+    "inputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*$",
+          "description": "League alias, such as nfl, ncaaf or epl. list_leagues returns the leagues this key can read."
+        },
+        "query": {
+          "description": "Team name, city, abbreviation, or a mix, such as \"vikings\", \"MIN\" or \"Minnesota\".",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "league"
+      ]
+    },
+    "outputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string"
+        },
+        "query": {
+          "type": "string"
+        },
+        "count": {
+          "type": "number",
+          "description": "How many teams matched, before any trimming."
+        },
+        "teams": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "alias": {
+                "type": "string"
+              },
+              "market": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "alias",
+              "market",
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "truncated": {
+          "description": "True when the result was trimmed to fit the response size budget.",
+          "type": "boolean"
+        },
+        "hint": {
+          "description": "How to get what the trimmed result left out.",
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "warning": {
+          "description": "Set when the account's request allowance is nearly used up.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "league",
+        "count",
+        "teams"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "title": "Find teams",
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "find_games",
+    "title": "Find games",
+    "description": "List one league's games, with ids, status, start time, teams and scores. Pass exactly one of: date, a schedule day in tz as YYYY-MM-DD, today, yesterday or tomorrow; from and to, ISO 8601 datetimes at most 31 days apart; or live: true, which reads yesterday and today in tz and keeps the games in progress, at halftime or delayed, so a game that runs past midnight still shows. team narrows the list to one team. Statpad lists a game about 10 minutes before kickoff, so a day that hasn't started yet usually comes back empty, which doesn't mean nothing is scheduled.",
+    "inputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*$",
+          "description": "League alias, such as nfl, ncaaf or epl. list_leagues returns the leagues this key can read."
+        },
+        "date": {
+          "description": "A schedule day in tz: YYYY-MM-DD, today, yesterday or tomorrow.",
+          "type": "string",
+          "pattern": "^(\\d{4}-\\d{2}-\\d{2}|today|yesterday|tomorrow)$"
+        },
+        "from": {
+          "description": "Range start, an ISO 8601 datetime such as 2026-11-08T00:00:00Z. Inclusive.",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?(Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "to": {
+          "description": "Range end, an ISO 8601 datetime. Exclusive, at most 31 days after from.",
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}(:\\d{2}(\\.\\d+)?)?(Z|[+-]\\d{2}:\\d{2})$"
+        },
+        "live": {
+          "description": "true for the games in progress, at halftime or delayed right now.",
+          "type": "boolean"
+        },
+        "team": {
+          "description": "Only games this team plays: a team id from find_teams, or a name such as \"Bills\", which costs one extra request.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "tz": {
+          "default": "America/New_York",
+          "description": "IANA time zone for date, today, yesterday and tomorrow, and for local_time. Default America/New_York.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "league"
+      ]
+    },
+    "outputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string"
+        },
+        "tz": {
+          "type": "string"
+        },
+        "date": {
+          "description": "The schedule day read, YYYY-MM-DD in tz.",
+          "type": "string"
+        },
+        "dates": {
+          "description": "With live, the two schedule days read.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "from": {
+          "type": "string"
+        },
+        "to": {
+          "type": "string"
+        },
+        "live": {
+          "type": "boolean"
+        },
+        "team": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "alias": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "count": {
+          "type": "number",
+          "description": "How many games matched, before any trimming."
+        },
+        "games": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "scheduled_at": {
+                "type": "string",
+                "description": "Start time, UTC."
+              },
+              "local_time": {
+                "description": "Start time in tz, YYYY-MM-DD HH:MM.",
+                "type": "string"
+              },
+              "away": {
+                "type": "string"
+              },
+              "home": {
+                "type": "string"
+              },
+              "away_score": {
+                "type": "number"
+              },
+              "home_score": {
+                "type": "number"
+              },
+              "game_type": {
+                "type": "string"
+              },
+              "neutral_site": {
+                "type": "boolean"
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "status",
+              "scheduled_at",
+              "away",
+              "home",
+              "game_type",
+              "neutral_site"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "truncated": {
+          "description": "True when the result was trimmed to fit the response size budget.",
+          "type": "boolean"
+        },
+        "hint": {
+          "description": "How to get what the trimmed result left out.",
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "warning": {
+          "description": "Set when the account's request allowance is nearly used up.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "league",
+        "tz",
+        "count",
+        "games"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "title": "Find games",
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "get_game",
+    "title": "Get a game",
+    "description": "Get one game's status, score and live situation: period, clock, possession and the sport's details, such as down and distance in football or the minute and red cards in soccer. live_state.updated_at says how fresh it is. Also returns the teams, the venue and seq, the game's change-stream position, which get_plays takes as after_seq. started_at and ended_at aren't filled yet, so use status. Score by period is left out until Statpad fills it.",
+    "inputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*$",
+          "description": "League alias, such as nfl, ncaaf or epl. list_leagues returns the leagues this key can read."
+        },
+        "game_id": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$",
+          "description": "Game id, from find_games."
+        }
+      },
+      "required": [
+        "league",
+        "game_id"
+      ]
+    },
+    "outputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string"
+        },
+        "game_id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "scheduled_at": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "game_type": {
+          "type": "string"
+        },
+        "neutral_site": {
+          "type": "boolean"
+        },
+        "away": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "alias": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "alias",
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "home": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "alias": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "alias",
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "away_score": {
+          "type": "number"
+        },
+        "home_score": {
+          "type": "number"
+        },
+        "venue": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "live_state": {
+          "type": "object",
+          "properties": {
+            "period": {
+              "type": "number"
+            },
+            "period_half": {
+              "type": "string"
+            },
+            "clock": {
+              "description": "Time left in the period, M:SS.",
+              "type": "string"
+            },
+            "possession": {
+              "type": "string"
+            },
+            "away_score": {
+              "type": "number"
+            },
+            "home_score": {
+              "type": "number"
+            },
+            "clock_running": {
+              "type": "boolean"
+            },
+            "football": {
+              "description": "Down, distance, yard line and timeouts.",
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string",
+                    "description": "A value Statpad defines as text."
+                  }
+                ]
+              }
+            },
+            "soccer": {
+              "description": "Minute, stoppage time, formations, red cards and shoot-out score.",
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string",
+                    "description": "A value Statpad defines as text."
+                  }
+                ]
+              }
+            },
+            "basketball": {
+              "description": "Timeouts and fouls.",
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string",
+                    "description": "A value Statpad defines as text."
+                  }
+                ]
+              }
+            },
+            "updated_at": {
+              "type": "string",
+              "description": "When Statpad last updated the live state. Quote it as the freshness of the data."
+            }
+          },
+          "required": [
+            "updated_at"
+          ],
+          "additionalProperties": false
+        },
+        "period_scores": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "team": {
+                "type": "string"
+              },
+              "period": {
+                "type": "number"
+              },
+              "period_type": {
+                "type": "string"
+              },
+              "points": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "team",
+              "period",
+              "period_type",
+              "points"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991,
+          "description": "The game's change-stream position this result reflects. Pass it to get_plays as after_seq for what changed since."
+        },
+        "truncated": {
+          "description": "True when the result was trimmed to fit the response size budget.",
+          "type": "boolean"
+        },
+        "hint": {
+          "description": "How to get what the trimmed result left out.",
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "warning": {
+          "description": "Set when the account's request allowance is nearly used up.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "league",
+        "game_id",
+        "status",
+        "scheduled_at",
+        "game_type",
+        "neutral_site",
+        "away",
+        "home",
+        "seq"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "title": "Get a game",
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "get_box_score",
+    "title": "Get a box score",
+    "description": "Get the player stat lines of one game, grouped by stat category, with player names and teams. Filter with team, an id or abbreviation; player, part of a name, ignoring accents; and category, such as passing, rushing, receiving, defensive, interceptions, fumbles, kicking, punting, kick_returns, punt_returns, soccer. With no filter on a big game it returns the top lines of each category, sets truncated and says how to see the rest. Statpad doesn't fill team totals or score by period yet. For a team total, add up that team's player lines for the category, and say the total is summed from player lines.",
+    "inputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*$",
+          "description": "League alias, such as nfl, ncaaf or epl. list_leagues returns the leagues this key can read."
+        },
+        "game_id": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$",
+          "description": "Game id, from find_games."
+        },
+        "team": {
+          "description": "Only this team: its id or abbreviation, such as BUF.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "player": {
+          "description": "Only players whose name contains this, such as \"allen\".",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "category": {
+          "description": "Only this stat category, such as passing, rushing, receiving, defensive, interceptions, fumbles, kicking, punting, kick_returns, punt_returns, soccer.",
+          "type": "string",
+          "pattern": "^[a-z_]+$"
+        }
+      },
+      "required": [
+        "league",
+        "game_id"
+      ]
+    },
+    "outputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string"
+        },
+        "game_id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "away": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "alias": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "alias",
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "home": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "alias": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "alias",
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "filters": {
+          "type": "object",
+          "properties": {
+            "team": {
+              "type": "string"
+            },
+            "player": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "lines": {
+          "type": "number",
+          "description": "How many player lines matched, before any trimming."
+        },
+        "categories": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "player": {
+                  "type": "string"
+                },
+                "player_id": {
+                  "type": "string"
+                },
+                "team": {
+                  "type": "string",
+                  "description": "Team abbreviation."
+                },
+                "jersey": {
+                  "type": "string"
+                },
+                "position": {
+                  "type": "string"
+                },
+                "stats": {
+                  "type": "object",
+                  "propertyNames": {
+                    "type": "string"
+                  },
+                  "additionalProperties": {
+                    "anyOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "string",
+                        "description": "A value Statpad defines as text."
+                      }
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "player",
+                "player_id",
+                "team",
+                "stats"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991,
+          "description": "The game's change-stream position this result reflects. Pass it to get_plays as after_seq for what changed since."
+        },
+        "truncated": {
+          "description": "True when the result was trimmed to fit the response size budget.",
+          "type": "boolean"
+        },
+        "hint": {
+          "description": "How to get what the trimmed result left out.",
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "warning": {
+          "description": "Set when the account's request allowance is nearly used up.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "league",
+        "game_id",
+        "status",
+        "away",
+        "home",
+        "lines",
+        "categories",
+        "seq"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "title": "Get a box score",
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "get_plays",
+    "title": "Get plays",
+    "description": "Get a game's play-by-play. mode recent returns the last plays, 10 by default; scoring returns the scoring plays, up to 50; drives returns drives or at-bats with team, result, yards, points and time of possession. Each play has the period, clock, team, description and the score after it. In NFL and NCAAF the description names the players. Every result has seq. To follow a live game, pass that seq back as after_seq to get only the plays and live-state changes since, then pass the new seq on the next call. If the stream no longer holds after_seq, the result has resync_required and a fresh seq from a new game read.",
+    "inputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*$",
+          "description": "League alias, such as nfl, ncaaf or epl. list_leagues returns the leagues this key can read."
+        },
+        "game_id": {
+          "type": "string",
+          "format": "uuid",
+          "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})$",
+          "description": "Game id, from find_games."
+        },
+        "mode": {
+          "default": "recent",
+          "description": "recent: the last plays. scoring: scoring plays only. drives: drives or at-bats with their result.",
+          "type": "string",
+          "enum": [
+            "recent",
+            "scoring",
+            "drives"
+          ]
+        },
+        "limit": {
+          "description": "How many plays or drives to return, newest last. Default 10 recent plays, up to 50 scoring plays, and every drive.",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50
+        },
+        "after_seq": {
+          "description": "Only what changed after this seq, from an earlier result. Works with recent and scoring.",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "league",
+        "game_id"
+      ]
+    },
+    "outputSchema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "league": {
+          "type": "string"
+        },
+        "game_id": {
+          "type": "string"
+        },
+        "mode": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "away": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "alias": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "alias",
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "home": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "alias": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "alias",
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "away_score": {
+          "type": "number"
+        },
+        "home_score": {
+          "type": "number"
+        },
+        "total_plays": {
+          "description": "Plays read from the game.",
+          "type": "number"
+        },
+        "count": {
+          "description": "How many plays or drives matched, before limit and trimming.",
+          "type": "number"
+        },
+        "plays": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "op": {
+                "type": "string",
+                "enum": [
+                  "upsert",
+                  "delete"
+                ]
+              },
+              "period": {
+                "type": "number"
+              },
+              "clock": {
+                "type": "string"
+              },
+              "team": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "away_score": {
+                "type": "number"
+              },
+              "home_score": {
+                "type": "number"
+              },
+              "points": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "drives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "description": "drive, at_bat or possession."
+              },
+              "period": {
+                "type": "number"
+              },
+              "team": {
+                "type": "string"
+              },
+              "result": {
+                "type": "string"
+              },
+              "plays": {
+                "type": "number"
+              },
+              "yards": {
+                "type": "number"
+              },
+              "first_downs": {
+                "type": "number"
+              },
+              "points": {
+                "type": "number"
+              },
+              "duration": {
+                "description": "Time of possession, M:SS.",
+                "type": "string"
+              },
+              "start_clock": {
+                "type": "string"
+              },
+              "start_yardline": {
+                "description": "0-100 from the offense's own goal line.",
+                "type": "number"
+              },
+              "end_yardline": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "kind",
+              "period"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "after_seq": {
+          "type": "number"
+        },
+        "head_seq": {
+          "description": "The stream's latest seq.",
+          "type": "number"
+        },
+        "caught_up": {
+          "description": "True when seq has reached head_seq.",
+          "type": "boolean"
+        },
+        "resync_required": {
+          "type": "boolean"
+        },
+        "live_state": {
+          "type": "object",
+          "properties": {
+            "period": {
+              "type": "number"
+            },
+            "period_half": {
+              "type": "string"
+            },
+            "clock": {
+              "description": "Time left in the period, M:SS.",
+              "type": "string"
+            },
+            "possession": {
+              "type": "string"
+            },
+            "away_score": {
+              "type": "number"
+            },
+            "home_score": {
+              "type": "number"
+            },
+            "clock_running": {
+              "type": "boolean"
+            },
+            "football": {
+              "description": "Down, distance, yard line and timeouts.",
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string",
+                    "description": "A value Statpad defines as text."
+                  }
+                ]
+              }
+            },
+            "soccer": {
+              "description": "Minute, stoppage time, formations, red cards and shoot-out score.",
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string",
+                    "description": "A value Statpad defines as text."
+                  }
+                ]
+              }
+            },
+            "basketball": {
+              "description": "Timeouts and fouls.",
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string",
+                    "description": "A value Statpad defines as text."
+                  }
+                ]
+              }
+            },
+            "updated_at": {
+              "type": "string",
+              "description": "When Statpad last updated the live state. Quote it as the freshness of the data."
+            }
+          },
+          "required": [
+            "updated_at"
+          ],
+          "additionalProperties": false
+        },
+        "seq": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991,
+          "description": "The game's change-stream position this result reflects. Pass it to get_plays as after_seq for what changed since."
+        },
+        "truncated": {
+          "description": "True when the result was trimmed to fit the response size budget.",
+          "type": "boolean"
+        },
+        "hint": {
+          "description": "How to get what the trimmed result left out.",
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "warning": {
+          "description": "Set when the account's request allowance is nearly used up.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "league",
+        "game_id",
+        "mode",
+        "status",
+        "away",
+        "home",
+        "seq"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "title": "Get plays",
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "openWorldHint": true
+    }
+  }
+]

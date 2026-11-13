@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "id": "01a1b987-644f-7459-b8e0-810b314f71da",
+      "title": null,
+      "league": "nfl",
+      "status": "complete",
+      "version": 1,
+      "week_id": "01a1b987-6455-7bc9-a76a-fb7382f87aa5",
+      "coverage": "full",
+      "ended_at": null,
+      "venue_id": "01a1b987-6457-74b4-84be-105aa41bda9b",
+      "game_type": "regular",
+      "season_id": "01a1b987-6453-7f24-8b50-864e0733cdcd",
+      "attendance": null,
+      "away_score": 33,
+      "home_score": 10,
+      "started_at": null,
+      "updated_at": "2026-11-08T05:00:20.428452Z",
+      "away_team_id": "01a1b987-6452-7f29-ac56-aab66006a3f5",
+      "home_team_id": "01a1b987-6450-7c2a-898a-4dfae5a45300",
+      "neutral_site": false,
+      "scheduled_at": "2026-11-06T01:15:00Z",
+      "rescheduled_from_id": null
+    }
+  ],
+  "teams": [
+    {
+      "id": "01a1b987-6450-7c2a-898a-4dfae5a45300",
+      "name": "Ravens",
+      "alias": "BAL",
+      "active": true,
+      "league": "nfl",
+      "market": "Baltimore",
+      "version": 1,
+      "venue_id": null,
+      "updated_at": "2026-11-08T05:00:20.428452Z"
+    },
+    {
+      "id": "01a1b987-6452-7f29-ac56-aab66006a3f5",
+      "name": "Jaguars",
+      "alias": "JAX",
+      "active": true,
+      "league": "nfl",
+      "market": "Jacksonville",
+      "version": 1,
+      "venue_id": null,
+      "updated_at": "2026-11-08T05:00:20.428452Z"
+    }
+  ],
+  "next_cursor": null
+}

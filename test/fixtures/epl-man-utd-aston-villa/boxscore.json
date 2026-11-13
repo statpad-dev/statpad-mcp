@@ -1,0 +1,968 @@
+{
+  "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+  "period_scores": [],
+  "players": [
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bb9e-7d48-89ee-57752eb3121f",
+      "stats": {
+        "soccer": {
+          "saves": 3,
+          "sub_ins": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 4,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba2-7341-ae38-2928a2c75551",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 2,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba2-7cf7-a74e-594713cda8e2",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 4,
+          "fouls_committed": 1,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba3-7613-a1b5-5141277776ce",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 1,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 4,
+          "fouls_committed": 2,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba3-7df8-99fa-f158d452ad2d",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 1,
+          "goal_assists": 1,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 4,
+          "fouls_committed": 4,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba4-797f-9c66-5bb64033676e",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 1,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 1,
+          "total_shots": 6,
+          "goal_assists": 1,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 4,
+          "fouls_committed": 3,
+          "shots_on_target": 1
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba5-7229-ba06-92b6551f8b43",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 1,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 4,
+          "fouls_committed": 2,
+          "shots_on_target": 1
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba5-722a-931a-4bfed76b8fa4",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 1,
+          "total_shots": 3,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 2,
+          "goals_conceded": 4,
+          "fouls_committed": 0,
+          "shots_on_target": 1
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba6-71ac-a86c-011a79b3937b",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 1,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 3,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 1,
+          "goals_conceded": 4,
+          "fouls_committed": 1,
+          "shots_on_target": 1
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba6-71ad-912b-0abd0ee3c348",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 3,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 2,
+          "goals_conceded": 4,
+          "fouls_committed": 1,
+          "shots_on_target": 2
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba6-7972-b5b2-3838d9e2cc8e",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 3,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 1,
+          "goals_conceded": 4,
+          "fouls_committed": 1,
+          "shots_on_target": 1
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba6-7973-8a07-39e288d05cd3",
+      "stats": {
+        "soccer": {
+          "sub_ins": 1,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 3,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 0,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba7-7300-a56d-c41da966f2d6",
+      "stats": {
+        "soccer": {
+          "sub_ins": 1,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 1,
+          "total_shots": 1,
+          "goal_assists": 1,
+          "yellow_cards": 0,
+          "fouls_suffered": 1,
+          "goals_conceded": 0,
+          "fouls_committed": 0,
+          "shots_on_target": 1
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba7-7b09-a840-e1661d4cac7c",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 0,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 0,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba8-7495-82e4-c9c2ab264733",
+      "stats": {
+        "soccer": {
+          "sub_ins": 1,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 1,
+          "total_shots": 1,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 0,
+          "fouls_committed": 1,
+          "shots_on_target": 1
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba8-7496-9f52-2e1ac782f542",
+      "stats": {
+        "soccer": {
+          "sub_ins": 1,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 1,
+          "fouls_suffered": 2,
+          "goals_conceded": 2,
+          "fouls_committed": 1,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba8-7c78-9d81-ac9c3ca296ad",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 0,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 0,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba8-7c79-ad03-3ee1b7bf0eb8",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 0,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 0,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba9-755d-bbfe-d3ee565cdf33",
+      "stats": {
+        "soccer": {
+          "saves": 0,
+          "sub_ins": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 0,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 0,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bba9-755e-bcf3-d1762c0c620c",
+      "stats": {
+        "soccer": {
+          "sub_ins": 1,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 0,
+          "fouls_committed": 1,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb95-75cf-bf85-9c04bdb7bb41",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbaa-7699-b474-67d3e930b6b6",
+      "stats": {
+        "soccer": {
+          "saves": 5,
+          "sub_ins": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 1,
+          "fouls_suffered": 0,
+          "goals_conceded": 4,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbaa-769a-98be-c7f7c7701959",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 1,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 4,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbab-70e7-8eac-a75232533a90",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 4,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbab-70e8-95aa-fabe7fae7c90",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 1,
+          "goals_conceded": 4,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbab-7a85-be7e-94ebe5dd4ef3",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 4,
+          "fouls_committed": 2,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbab-7a86-b2e0-7b22add2de71",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 1,
+          "total_shots": 1,
+          "goal_assists": 1,
+          "yellow_cards": 0,
+          "fouls_suffered": 3,
+          "goals_conceded": 2,
+          "fouls_committed": 1,
+          "shots_on_target": 1
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbac-731f-a58a-0d6611bc2842",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 1,
+          "total_shots": 1,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 1,
+          "goals_conceded": 2,
+          "fouls_committed": 4,
+          "shots_on_target": 1
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbac-7320-a824-91a9ad76843f",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 1,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 3,
+          "goals_conceded": 4,
+          "fouls_committed": 1,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbac-7c4c-948d-58a390aa9241",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 1,
+          "total_shots": 2,
+          "goal_assists": 1,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 2,
+          "fouls_committed": 0,
+          "shots_on_target": 1
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbad-7620-8d7b-0cbb5b967221",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 1,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 5,
+          "goals_conceded": 2,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbad-7621-a369-f36d65ca1f13",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 1,
+          "total_shots": 3,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 2,
+          "goals_conceded": 2,
+          "fouls_committed": 0,
+          "shots_on_target": 2
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbad-7e09-a800-3d483dcb98a7",
+      "stats": {
+        "soccer": {
+          "sub_ins": 1,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 2,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbad-7e0a-955d-0bcdfd299d29",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 0,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 0,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbae-7764-a1c6-995344aa5e83",
+      "stats": {
+        "soccer": {
+          "saves": 0,
+          "sub_ins": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 0,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 0,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbae-7765-9f77-7181f356d91b",
+      "stats": {
+        "soccer": {
+          "sub_ins": 1,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 2,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbaf-740d-8f46-0e02c197aa31",
+      "stats": {
+        "soccer": {
+          "sub_ins": 1,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 2,
+          "goals_conceded": 2,
+          "fouls_committed": 1,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbaf-7c65-8160-be4ffc663a61",
+      "stats": {
+        "soccer": {
+          "sub_ins": 1,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 2,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 2,
+          "fouls_committed": 0,
+          "shots_on_target": 1
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbaf-7c66-aa9e-14f576cf1f33",
+      "stats": {
+        "soccer": {
+          "sub_ins": 1,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 1,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 1,
+          "goals_conceded": 2,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbb0-74fe-8382-9bcf02a1541d",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 0,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 0,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+      "player_id": "01a1cca4-bbb0-7dba-bcf8-3ce9c6e5de09",
+      "stats": {
+        "soccer": {
+          "sub_ins": 0,
+          "offsides": 0,
+          "own_goals": 0,
+          "red_cards": 0,
+          "appearances": 0,
+          "shots_faced": 0,
+          "total_goals": 0,
+          "total_shots": 0,
+          "goal_assists": 0,
+          "yellow_cards": 0,
+          "fouls_suffered": 0,
+          "goals_conceded": 0,
+          "fouls_committed": 0,
+          "shots_on_target": 0
+        }
+      },
+      "team_id": "01a1cca4-bb96-75fd-b16c-e967ddd9de0f",
+      "version": 1
+    }
+  ],
+  "seq": 188,
+  "teams": []
+}

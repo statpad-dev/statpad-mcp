@@ -1,0 +1,132 @@
+{
+  "game": {
+    "id": "01a1b987-64e7-74e3-8db1-b939d352190d",
+    "title": null,
+    "league": "ncaaf",
+    "status": "inprogress",
+    "version": 1,
+    "week_id": "01a1b987-64e8-7837-beb6-a5d9ddf093e8",
+    "coverage": "full",
+    "ended_at": null,
+    "venue_id": "01a1b987-64e8-760f-bf21-c366949b2be9",
+    "game_type": "regular",
+    "season_id": "01a1b987-64e8-7612-9fdf-7bb93b23171e",
+    "attendance": null,
+    "away_score": 43,
+    "home_score": 24,
+    "started_at": null,
+    "updated_at": "2026-11-08T05:00:20.583197Z",
+    "away_team_id": "01a1b987-64e7-7d57-bdf8-52aecf5e4216",
+    "home_team_id": "01a1b987-64e7-74e4-8cf6-9f7b3bdea67d",
+    "neutral_site": false,
+    "scheduled_at": "2026-11-07T23:00:00Z",
+    "rescheduled_from_id": null
+  },
+  "live_state": {
+    "period": 4,
+    "soccer": null,
+    "basketball": null,
+    "game_id": "01a1b987-64e7-74e3-8db1-b939d352190d",
+    "version": 1,
+    "football": {
+      "down": 3,
+      "yardline": 99,
+      "yards_to_go": 1,
+      "away_timeouts": 0,
+      "home_timeouts": 2
+    },
+    "away_score": 43,
+    "home_score": 24,
+    "updated_at": "2026-11-08T05:00:20.583197Z",
+    "period_half": null,
+    "last_play_id": null,
+    "clock_running": false,
+    "clock_seconds": 778,
+    "possession_team_id": "01a1b987-64e7-7d57-bdf8-52aecf5e4216"
+  },
+  "home_team": {
+    "id": "01a1b987-64e7-74e4-8cf6-9f7b3bdea67d",
+    "name": "Rams",
+    "alias": "CSU",
+    "active": true,
+    "league": "ncaaf",
+    "market": "Colorado State",
+    "version": 1,
+    "venue_id": null,
+    "updated_at": "2026-11-08T05:00:20.583197Z"
+  },
+  "away_team": {
+    "id": "01a1b987-64e7-7d57-bdf8-52aecf5e4216",
+    "name": "Broncos",
+    "alias": "BOIS",
+    "active": true,
+    "league": "ncaaf",
+    "market": "Boise State",
+    "version": 1,
+    "venue_id": null,
+    "updated_at": "2026-11-08T05:00:20.583197Z"
+  },
+  "venue": {
+    "id": "01a1b987-64e8-760f-bf21-c366949b2be9",
+    "city": "Fort Collins",
+    "name": "Canvas Stadium",
+    "state": "CO",
+    "country": null,
+    "surface": null,
+    "version": 1,
+    "capacity": null,
+    "timezone": null,
+    "roof_type": null
+  },
+  "period_scores": [
+    {
+      "team_id": "01a1b987-64e7-74e4-8cf6-9f7b3bdea67d",
+      "period": 1,
+      "period_type": "regular",
+      "points": 7
+    },
+    {
+      "team_id": "01a1b987-64e7-74e4-8cf6-9f7b3bdea67d",
+      "period": 2,
+      "period_type": "regular",
+      "points": 3
+    },
+    {
+      "team_id": "01a1b987-64e7-74e4-8cf6-9f7b3bdea67d",
+      "period": 3,
+      "period_type": "regular",
+      "points": 14
+    },
+    {
+      "team_id": "01a1b987-64e7-74e4-8cf6-9f7b3bdea67d",
+      "period": 4,
+      "period_type": "regular",
+      "points": 0
+    },
+    {
+      "team_id": "01a1b987-64e7-7d57-bdf8-52aecf5e4216",
+      "period": 1,
+      "period_type": "regular",
+      "points": 22
+    },
+    {
+      "team_id": "01a1b987-64e7-7d57-bdf8-52aecf5e4216",
+      "period": 2,
+      "period_type": "regular",
+      "points": 7
+    },
+    {
+      "team_id": "01a1b987-64e7-7d57-bdf8-52aecf5e4216",
+      "period": 3,
+      "period_type": "regular",
+      "points": 14
+    },
+    {
+      "team_id": "01a1b987-64e7-7d57-bdf8-52aecf5e4216",
+      "period": 4,
+      "period_type": "regular",
+      "points": 0
+    }
+  ],
+  "seq": 283
+}

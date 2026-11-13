@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "id": "01a1b987-6450-7c2a-898a-4dfae5a45300",
+      "name": "Ravens",
+      "alias": "BAL",
+      "active": true,
+      "league": "nfl",
+      "market": "Baltimore",
+      "version": 1,
+      "venue_id": null,
+      "updated_at": "2026-11-08T05:00:20.428452Z"
+    },
+    {
+      "id": "01a1b987-6452-7f29-ac56-aab66006a3f5",
+      "name": "Jaguars",
+      "alias": "JAX",
+      "active": true,
+      "league": "nfl",
+      "market": "Jacksonville",
+      "version": 1,
+      "venue_id": null,
+      "updated_at": "2026-11-08T05:00:20.428452Z"
+    }
+  ],
+  "next_cursor": "eyJtIjoiSmFja3NvbnZpbGxlIiwibiI6IkphZ3VhcnMiLCJpIjoiMDFhMWI5ODctNjQ1Mi03ZjI5LWFjNTYtYWFiNjYwMDZhM2Y1In0"
+}

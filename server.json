@@ -1,0 +1,32 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.statpad-dev/statpad-mcp",
+  "title": "Statpad",
+  "description": "Live NFL, college football and Premier League scores, play-by-play and box scores from Statpad.",
+  "websiteUrl": "https://statpad.dev/docs",
+  "repository": {
+    "url": "https://github.com/statpad-dev/statpad-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@statpad/mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "STATPAD_API_KEY",
+          "description": "A Statpad API key from the Keys page at https://app.statpad.dev. Use a dedicated key.",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}

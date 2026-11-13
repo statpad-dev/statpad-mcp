@@ -1,0 +1,1305 @@
+{
+  "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+  "period_scores": [],
+  "players": [
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-40f8-7c20-ac43-d72e6939f5a9",
+      "stats": {
+        "kick_returns": {
+          "yards": 58,
+          "longest": 58,
+          "returns": 1,
+          "touchdowns": 0,
+          "yards_per_return": 58
+        },
+        "punt_returns": {
+          "yards": 11,
+          "longest": 6,
+          "returns": 2,
+          "touchdowns": 0,
+          "yards_per_return": 5.5
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 4
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-40fb-73d7-85a0-cad43dd64e90",
+      "stats": {
+        "defensive": {
+          "sacks": 1,
+          "qb_hits": 1,
+          "tackles": 4,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 0,
+          "tackles_for_loss": 1
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 4
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-411d-7516-bbbb-7507132f30ef",
+      "stats": {
+        "receiving": {
+          "yards": 0,
+          "longest": 0,
+          "targets": 1,
+          "receptions": 0,
+          "touchdowns": 0,
+          "yards_per_reception": 0
+        },
+        "rushing": {
+          "att": 31,
+          "yards": 107,
+          "longest": 11,
+          "touchdowns": 1,
+          "yards_per_attempt": 3.5
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 34
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-411d-7d00-8d0e-9813e0551153",
+      "stats": {
+        "defensive": {
+          "sacks": 1,
+          "qb_hits": 1,
+          "tackles": 5,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 1,
+          "tackles_for_loss": 1
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 8
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4126-7b46-8843-b7dc054dfb7d",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 9,
+          "touchdowns": 0,
+          "solo_tackles": 3,
+          "passes_defended": 0,
+          "tackles_for_loss": 1
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 11
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4140-7eb5-8ec0-4d501c3e8a5f",
+      "stats": {
+        "fumbles": {
+          "lost": 1,
+          "fumbles": 1,
+          "recovered": 0
+        },
+        "passing": {
+          "att": 31,
+          "sacks": 4,
+          "yards": 234,
+          "rating": 87.3,
+          "touchdowns": 1,
+          "completions": 21,
+          "interceptions": 1,
+          "sack_yards_lost": 29,
+          "yards_per_attempt": 7.5
+        },
+        "rushing": {
+          "att": 6,
+          "yards": 15,
+          "longest": 7,
+          "touchdowns": 0,
+          "yards_per_attempt": 2.5
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 46
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4169-7c0f-9366-0147150607ce",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        },
+        "punting": {
+          "punts": 5,
+          "yards": 228,
+          "longest": 48,
+          "inside_20": 0,
+          "touchbacks": 2,
+          "gross_average": 45.6
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 7
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4185-7d83-994e-3fa1596b44c2",
+      "stats": {
+        "receiving": {
+          "yards": 5,
+          "longest": 5,
+          "targets": 1,
+          "receptions": 1,
+          "touchdowns": 0,
+          "yards_per_reception": 5
+        },
+        "rushing": {
+          "att": 5,
+          "yards": 16,
+          "longest": 5,
+          "touchdowns": 0,
+          "yards_per_attempt": 3.2
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 7
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-418b-7b98-9b49-7540573a6bb3",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 3,
+          "tackles": 2,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 5
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-418c-75a1-8cb8-e04258d2a3c2",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 1,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 0,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 2
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-419e-7631-9f7b-d63f2b0d89dd",
+      "stats": {
+        "fumbles": {
+          "lost": 1,
+          "fumbles": 1,
+          "recovered": 0
+        },
+        "passing": {
+          "att": 25,
+          "sacks": 1,
+          "yards": 81,
+          "rating": 8.9,
+          "touchdowns": 0,
+          "completions": 8,
+          "interceptions": 2,
+          "sack_yards_lost": 6,
+          "yards_per_attempt": 3.2
+        },
+        "rushing": {
+          "att": 1,
+          "yards": 0,
+          "longest": 0,
+          "touchdowns": 0,
+          "yards_per_attempt": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 31
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-419e-7dfc-9c6a-c30fac7e2f32",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        },
+        "receiving": {
+          "yards": 33,
+          "longest": 14,
+          "targets": 7,
+          "receptions": 4,
+          "touchdowns": 0,
+          "yards_per_reception": 8.3
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 8
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-41b7-759e-92d4-07c56d90eb37",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 1,
+          "tackles": 6,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 2,
+          "tackles_for_loss": 0
+        },
+        "interceptions": {
+          "yards": 5,
+          "touchdowns": 0,
+          "interceptions": 1
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 10
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-41b7-759f-9e3c-69a7300ba14a",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 4,
+          "touchdowns": 0,
+          "solo_tackles": 3,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 4
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-41cf-7d73-809c-f23857fd6cd3",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        },
+        "receiving": {
+          "yards": 2,
+          "longest": 2,
+          "targets": 1,
+          "receptions": 1,
+          "touchdowns": 0,
+          "yards_per_reception": 2
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 2
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-41d0-7609-8bb2-95f2909f67cc",
+      "stats": {
+        "punting": {
+          "punts": 5,
+          "yards": 240,
+          "longest": 66,
+          "inside_20": 4,
+          "touchbacks": 0,
+          "gross_average": 48
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 5
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4218-72ce-9fc6-02e1f17aecd3",
+      "stats": {
+        "defensive": {
+          "sacks": 1,
+          "qb_hits": 4,
+          "tackles": 4,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 0,
+          "tackles_for_loss": 1
+        },
+        "fumbles": {
+          "lost": 0,
+          "fumbles": 0,
+          "recovered": 1
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 12
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-421e-7a89-bab9-870a6a20a5ab",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 6,
+          "touchdowns": 0,
+          "solo_tackles": 5,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 6
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4230-7adf-aab4-d37a9dcb17d2",
+      "stats": {
+        "receiving": {
+          "yards": 17,
+          "longest": 11,
+          "targets": 6,
+          "receptions": 3,
+          "touchdowns": 0,
+          "yards_per_reception": 5.7
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 6
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4230-7ae0-ad0e-d4d4412d1cbe",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 12,
+          "touchdowns": 0,
+          "solo_tackles": 6,
+          "passes_defended": 2,
+          "tackles_for_loss": 1
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 18
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-424f-7a4e-898d-08e68e0a5d1c",
+      "stats": {
+        "receiving": {
+          "yards": 25,
+          "longest": 15,
+          "targets": 5,
+          "receptions": 3,
+          "touchdowns": 0,
+          "yards_per_reception": 8.3
+        },
+        "rushing": {
+          "att": 1,
+          "yards": 11,
+          "longest": 11,
+          "touchdowns": 0,
+          "yards_per_attempt": 11
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 6
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-424f-7a4f-bd1f-545caacd8c19",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 4,
+          "touchdowns": 0,
+          "solo_tackles": 3,
+          "passes_defended": 1,
+          "tackles_for_loss": 0
+        },
+        "interceptions": {
+          "yards": 54,
+          "touchdowns": 0,
+          "interceptions": 1
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 8
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4261-7be8-bd6d-9e95ecf282eb",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4297-773a-af55-8ab638904384",
+      "stats": {
+        "receiving": {
+          "yards": 58,
+          "longest": 22,
+          "targets": 4,
+          "receptions": 4,
+          "touchdowns": 0,
+          "yards_per_reception": 14.5
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 5
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4297-7f23-9e25-86b19c96e851",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 4,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 5
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-42b5-7481-b090-26a2bdf93595",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 5,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 8
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4322-70c3-a83c-1469217db16b",
+      "stats": {
+        "receiving": {
+          "yards": 36,
+          "longest": 36,
+          "targets": 2,
+          "receptions": 2,
+          "touchdowns": 0,
+          "yards_per_reception": 18
+        },
+        "rushing": {
+          "att": 1,
+          "yards": 1,
+          "longest": 1,
+          "touchdowns": 0,
+          "yards_per_attempt": 1
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 3
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4322-789d-9745-5762014b7e44",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 1,
+          "tackles": 8,
+          "touchdowns": 0,
+          "solo_tackles": 3,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 11
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4351-7e4d-a6b7-18d9255a6f31",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-43c1-7426-935b-8ae9f8ec8d94",
+      "stats": {
+        "receiving": {
+          "yards": 58,
+          "longest": 24,
+          "targets": 11,
+          "receptions": 3,
+          "touchdowns": 0,
+          "yards_per_reception": 19.3
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 11
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-441d-7a9f-a493-5fca38013de2",
+      "stats": {
+        "defensive": {
+          "sacks": 1,
+          "qb_hits": 3,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 1,
+          "tackles_for_loss": 1
+        },
+        "fumbles": {
+          "lost": 0,
+          "fumbles": 0,
+          "recovered": 1
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 4
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4467-77f7-b46f-edb723a0a069",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 2,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 2
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4482-7979-8ffa-cec1695b4050",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 5,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 10
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-44c7-7c11-b780-cb45f6c825bd",
+      "stats": {
+        "receiving": {
+          "yards": 28,
+          "longest": 12,
+          "targets": 3,
+          "receptions": 3,
+          "touchdowns": 0,
+          "yards_per_reception": 9.3
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 5
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-44fe-7822-ab46-84f527c79be8",
+      "stats": {
+        "receiving": {
+          "yards": 37,
+          "longest": 12,
+          "targets": 5,
+          "receptions": 4,
+          "touchdowns": 0,
+          "yards_per_reception": 9.3
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 5
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4544-7965-a200-44f2f67a93ab",
+      "stats": {
+        "kicking": {
+          "points": 11,
+          "field_goal_pct": 100,
+          "field_goals_made": 3,
+          "extra_points_made": 2,
+          "longest_field_goal": 52,
+          "field_goal_attempts": 3,
+          "extra_point_attempts": 2
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 5
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4591-76bf-b780-16d7c659ddce",
+      "stats": {
+        "defensive": {
+          "sacks": 0.5,
+          "qb_hits": 1,
+          "tackles": 5,
+          "touchdowns": 0,
+          "solo_tackles": 0,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 7
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-45dc-79a3-bdbf-07abfc626b36",
+      "stats": {
+        "fumbles": {
+          "lost": 0,
+          "fumbles": 1,
+          "recovered": 0
+        },
+        "kick_returns": {
+          "yards": 124,
+          "longest": 35,
+          "returns": 4,
+          "touchdowns": 0,
+          "yards_per_return": 31
+        },
+        "punt_returns": {
+          "yards": 12,
+          "longest": 12,
+          "returns": 1,
+          "touchdowns": 0,
+          "yards_per_return": 12
+        },
+        "receiving": {
+          "yards": 6,
+          "longest": 6,
+          "targets": 4,
+          "receptions": 1,
+          "touchdowns": 0,
+          "yards_per_reception": 6
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 11
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-45dc-79a4-b3a9-62f0cbc38a70",
+      "stats": {
+        "fumbles": {
+          "lost": 0,
+          "fumbles": 0,
+          "recovered": 1
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-45f1-79eb-84a0-6fa2c3ab93db",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 3,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 4
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-45fb-726f-b730-07f7fae35782",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 3,
+          "touchdowns": 0,
+          "solo_tackles": 0,
+          "passes_defended": 1,
+          "tackles_for_loss": 0
+        },
+        "interceptions": {
+          "yards": 0,
+          "touchdowns": 0,
+          "interceptions": 1
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 7
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-45fb-7a25-b04d-a129cc7ee5a1",
+      "stats": {
+        "receiving": {
+          "yards": 7,
+          "longest": 4,
+          "targets": 3,
+          "receptions": 2,
+          "touchdowns": 0,
+          "yards_per_reception": 3.5
+        },
+        "rushing": {
+          "att": 6,
+          "yards": 35,
+          "longest": 11,
+          "touchdowns": 0,
+          "yards_per_attempt": 5.8
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 9
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4628-7a96-994a-6f5e5db99c43",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 0,
+          "touchdowns": 0,
+          "solo_tackles": 0,
+          "passes_defended": 1,
+          "tackles_for_loss": 0
+        },
+        "rushing": {
+          "att": 3,
+          "yards": -2,
+          "longest": 0,
+          "touchdowns": 0,
+          "yards_per_attempt": -0.7
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 4
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4653-743f-9409-3f3c73a5c82b",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 2,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 1,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 3
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-46ea-7bf9-b15b-66b98b96b995",
+      "stats": {
+        "receiving": {
+          "yards": 0,
+          "longest": 0,
+          "targets": 1,
+          "receptions": 0,
+          "touchdowns": 0,
+          "yards_per_reception": 0
+        },
+        "rushing": {
+          "att": 2,
+          "yards": 2,
+          "longest": 2,
+          "touchdowns": 0,
+          "yards_per_attempt": 1
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 4
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-471f-7215-95fe-b25343138707",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 1,
+          "tackles": 2,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 4
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-479e-7c80-9b25-8f355b62f098",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 0,
+          "passes_defended": 1,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 2
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-492e-74d4-827d-4dceb42220d3",
+      "stats": {
+        "defensive": {
+          "sacks": 0.5,
+          "qb_hits": 2,
+          "tackles": 5,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 7
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4aa8-74ff-84a0-1e803104d2d3",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 2,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 2
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4dca-791e-be1d-eea43650f3a2",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4df6-79ac-8d2d-2d0e82fbcb61",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4e9a-7a19-aaa4-6aee45733466",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 4,
+          "touchdowns": 0,
+          "solo_tackles": 3,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 5
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4ec0-74c0-9326-2e5e968fa1f6",
+      "stats": {
+        "kicking": {
+          "points": 6,
+          "field_goal_pct": 100,
+          "field_goals_made": 2,
+          "extra_points_made": 0,
+          "longest_field_goal": 53,
+          "field_goal_attempts": 2,
+          "extra_point_attempts": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 2
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-4f85-7298-8f81-be59b6295760",
+      "stats": {
+        "receiving": {
+          "yards": 8,
+          "longest": 8,
+          "targets": 1,
+          "receptions": 1,
+          "touchdowns": 0,
+          "yards_per_reception": 8
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-519d-7069-a465-cd75d25b4894",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        },
+        "receiving": {
+          "yards": 25,
+          "longest": 25,
+          "targets": 1,
+          "receptions": 1,
+          "touchdowns": 1,
+          "yards_per_reception": 25
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 2
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-52fb-7e62-b83d-eac11dd83ff3",
+      "stats": {
+        "receiving": {
+          "yards": 28,
+          "longest": 16,
+          "targets": 3,
+          "receptions": 2,
+          "touchdowns": 0,
+          "yards_per_reception": 14
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 3
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-5319-71c3-9356-e7c9d6b05bdd",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 2,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 2
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-5836-76dd-9b53-59ceb6d023b2",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 2,
+          "touchdowns": 0,
+          "solo_tackles": 2,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 2
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-585e-7670-9b67-ac46197416c1",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 0,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-5b71-7a71-a03a-b13ae367a59b",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 3,
+          "touchdowns": 0,
+          "solo_tackles": 3,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 3
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-5d31-7ed1-94d6-97be4e9dd0fc",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 2,
+          "touchdowns": 0,
+          "solo_tackles": 0,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 3
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-5fcc-7cf7-8bae-f8e837b6d76c",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-684e-7637-96b9-8293a0661d0e",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 2,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 3
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-881f-7a4f-83c3-bfaab7ca2247",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 0,
+          "passes_defended": 1,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 2
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-8b67-7efa-b2d8-b95847818fa7",
+      "stats": {
+        "passing": {
+          "att": 7,
+          "sacks": 1,
+          "yards": 58,
+          "rating": 101.2,
+          "touchdowns": 0,
+          "completions": 6,
+          "interceptions": 0,
+          "sack_yards_lost": 6,
+          "yards_per_attempt": 8.3
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 7
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-8b92-71c9-a29e-1fb4013b647c",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-8cc2-7d86-aa59-7a9284b77ec2",
+      "stats": {
+        "defensive": {
+          "sacks": 1,
+          "qb_hits": 1,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 1,
+          "passes_defended": 0,
+          "tackles_for_loss": 1
+        }
+      },
+      "team_id": "01a1cca4-3e05-7c90-a80f-05893446d191",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+      "player_id": "01a1cca4-8e76-7d7b-8d03-f58e2bd7f403",
+      "stats": {
+        "defensive": {
+          "sacks": 0,
+          "qb_hits": 0,
+          "tackles": 1,
+          "touchdowns": 0,
+          "solo_tackles": 0,
+          "passes_defended": 0,
+          "tackles_for_loss": 0
+        }
+      },
+      "team_id": "01a1cca4-3e02-7ee2-8538-b59f1670159f",
+      "version": 1
+    }
+  ],
+  "seq": 1260,
+  "teams": []
+}

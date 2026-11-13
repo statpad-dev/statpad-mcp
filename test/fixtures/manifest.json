@@ -1,0 +1,94 @@
+[
+  {
+    "league": "epl",
+    "dir": "epl-man-utd-aston-villa",
+    "title": "Aston Villa at Manchester United",
+    "game_id": "01a1cca4-bb93-77d8-8fd9-e865faca45b5",
+    "kickoff": "2026-11-08T16:30:00Z",
+    "status": "complete",
+    "final_score": {
+      "away": {
+        "team": "Aston Villa",
+        "alias": "AVL",
+        "score": 4
+      },
+      "home": {
+        "team": "Manchester United",
+        "alias": "MAN",
+        "score": 4
+      }
+    },
+    "changes": 188,
+    "plays": 106,
+    "files": [
+      {
+        "name": "boxscore.json",
+        "bytes": 26395
+      },
+      {
+        "name": "game.json",
+        "bytes": 2272
+      },
+      {
+        "name": "plays.json",
+        "bytes": 133834
+      },
+      {
+        "name": "roster.json",
+        "bytes": 32170
+      }
+    ]
+  },
+  {
+    "league": "nfl",
+    "dir": "nfl-bills-at-vikings",
+    "title": "Bills at Vikings",
+    "game_id": "01a1cca4-3e00-7e94-bcef-b47bbed025f0",
+    "kickoff": "2026-11-10T01:15:00Z",
+    "status": "complete",
+    "final_score": {
+      "away": {
+        "team": "Bills",
+        "alias": "BUF",
+        "score": 23
+      },
+      "home": {
+        "team": "Vikings",
+        "alias": "MIN",
+        "score": 6
+      }
+    },
+    "changes": 1260,
+    "plays": 187,
+    "files": [
+      {
+        "name": "boxscore.json",
+        "bytes": 34225
+      },
+      {
+        "name": "changes.ndjson",
+        "bytes": 838627
+      },
+      {
+        "name": "game-live.json",
+        "bytes": 2170
+      },
+      {
+        "name": "game.json",
+        "bytes": 2019
+      },
+      {
+        "name": "play-groups.json",
+        "bytes": 15861
+      },
+      {
+        "name": "plays.json",
+        "bytes": 230199
+      },
+      {
+        "name": "roster.json",
+        "bytes": 54714
+      }
+    ]
+  }
+]
