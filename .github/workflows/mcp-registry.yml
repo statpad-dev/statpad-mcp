@@ -1,0 +1,61 @@
+name: MCP Registry
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to publish, such as v0.1.0. Its version must already be live on npm.
+        required: true
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: mcp-registry
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    env:
+      MCP_PUBLISHER_VERSION: v1.8.9
+      TAG: ${{ inputs.tag }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.tag }}
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Check the tag matches server.json and the version is live on npm
+        run: |
+          set -euo pipefail
+          version="$(node -p "require('./server.json').version")"
+          test "${TAG#v}" = "$version"
+          test "$(node -p "require('./server.json').packages[0].version")" = "$version"
+          name="$(node -p "require('./server.json').name")"
+          published="$(npm view "@statpad/mcp@$version" mcpName)"
+          if [ "$published" != "$name" ]; then
+            echo "@statpad/mcp@$version on npm has mcpName '$published', expected '$name'. Approve the staged version on npm first." >&2
+            exit 1
+          fi
+      - uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
+      - name: Download and verify mcp-publisher
+        run: |
+          set -euo pipefail
+          archive=mcp-publisher_linux_amd64.tar.gz
+          base_url="https://github.com/modelcontextprotocol/registry/releases/download/${MCP_PUBLISHER_VERSION}"
+          curl --fail --location --silent --show-error --output "$archive" "$base_url/$archive"
+          curl --fail --location --silent --show-error --output "$archive.sigstore.json" "$base_url/$archive.sigstore.json"
+          cosign verify-blob \
+            --bundle "$archive.sigstore.json" \
+            --certificate-identity "https://github.com/modelcontextprotocol/registry/.github/workflows/release.yml@refs/tags/${MCP_PUBLISHER_VERSION}" \
+            --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+            "$archive"
+          tar xzf "$archive" mcp-publisher
+          rm -f "$archive" "$archive.sigstore.json"
+      - name: Sign in to the MCP Registry with the workflow's OIDC token
+        run: ./mcp-publisher login github-oidc
+      - name: Publish server.json
+        run: ./mcp-publisher publish

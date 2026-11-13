@@ -59,4 +59,6 @@ The tests connect a real MCP client to the server in memory, and a stubbed `fetc
 2. Merge to `main`.
 3. Publish a GitHub release whose tag is that version with a `v` in front, such as `v0.1.0`.
 
-The Release workflow checks the tag against `package.json` and `server.json`, refuses `file:` dependencies, runs `npm run check`, and stages the package with `npm stage publish` through npm trusted publishing. A maintainer then approves the staged version on npmjs.com. After that, publish `server.json` to the MCP Registry with `mcp-publisher login github` and `mcp-publisher publish`. The registry checks that `mcpName` in the published `package.json` matches the name in `server.json`.
+The Release workflow checks the tag against `package.json` and `server.json`, refuses `file:` dependencies, runs `npm run check`, and stages the package with `npm stage publish` through npm trusted publishing. A maintainer then approves the staged version on npmjs.com.
+
+Once that version is live on npm, run the MCP Registry workflow from the Actions tab with the release tag, or with `gh workflow run mcp-registry.yml -f tag=v0.1.0`. It checks out the tag, confirms that npm serves that version with the `mcpName` from `server.json`, and publishes `server.json` with `mcp-publisher`. It signs in with the workflow's GitHub OIDC token, because the registry only grants the `io.github.statpad-dev` namespace to statpad-dev owners, and `mcp-publisher login github` on a laptop can't read organization roles.
