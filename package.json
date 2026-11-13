@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/server": "^2.4.0",
-    "@statpad/sdk": "file:vendor/statpad-sdk-0.1.0.tgz",
+    "@statpad/sdk": "^0.1.0",
     "zod": "^4.2.0"
   },
   "devDependencies": {
