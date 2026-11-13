@@ -45,18 +45,6 @@ The tests connect a real MCP client to the server in memory, and a stubbed `fetc
 
 `npm run check:live` builds the server and runs it over stdio against the real API without a real key. It confirms that a malformed key stops the server at startup, and that a well-formed key Statpad never issued gets through initialize and tools/list. It then asks the API directly what it answers for that key, and checks that `list_leagues` maps the same answer. The API should answer 401, which maps to `unauthorized`. Any other answer passes with a warning, because the unauthorized path went untested. It needs the network, so CI doesn't run it.
 
-## The vendored SDK
-
-`@statpad/sdk` isn't on npm yet, so `vendor/statpad-sdk-0.1.0.tgz` holds a copy, and `package.json` depends on it as `file:vendor/statpad-sdk-0.1.0.tgz`. That keeps `npm ci` working in CI. To refresh it, run `npm ci` and `npm pack --pack-destination <this repo>/vendor` in a checkout of statpad-dev/statpad-node, then `npm install` here.
-
-Once the SDK is on npm, drop the copy:
-
-1. Run `npm install @statpad/sdk@^0.1.0`, which rewrites the dependency to `^0.1.0` and updates `package-lock.json`.
-2. Delete `vendor/` and this section.
-3. Run `npm run check`.
-
-The release workflow runs `npm run check:deps`, which fails while any dependency is a `file:` path, so a release can't ship before this is done.
-
 ## Evals
 
 [evals/questions.md](evals/questions.md) holds 33 questions a person might ask an agent, each with the tool calls it should make and what a correct answer must contain or must decline. For some, such as standings and injuries, the right answer is "not available". The tests can't judge an answer, so run the evals by hand before a release that changes a tool, its description or the server instructions:
