@@ -45,6 +45,8 @@ The tests connect a real MCP client to the server in memory, and a stubbed `fetc
 
 `npm run check:live` builds the server and runs it over stdio against the real API without a real key. It confirms that a malformed key stops the server at startup, and that a well-formed key Statpad never issued gets through initialize and tools/list. It then asks the API directly what it answers for that key, and checks that `list_leagues` maps the same answer. The API should answer 401, which maps to `unauthorized`. Any other answer passes with a warning, because the unauthorized path went untested. It needs the network, so CI doesn't run it.
 
+`npm run test:live` builds the server and runs it over stdio with a real key from `STATPAD_API_KEY`, twice: once with a legacy client and once with a client pinned to protocol 2026-07-28. Each time it calls all six tools on the last finished game it finds in the past 14 days, checks that every structured result matches its text, maps an unknown game to `not_found` and checks that the key never appears in tool output or server logs. The Live workflow runs it every day, on every push to `main` and on demand, with the key stored as the `STATPAD_API_KEY` secret in the repository's `live` environment.
+
 ## Evals
 
 [evals/questions.md](evals/questions.md) holds 33 questions a person might ask an agent, each with the tool calls it should make and what a correct answer must contain or must decline. For some, such as standings and injuries, the right answer is "not available". The tests can't judge an answer, so run the evals by hand before a release that changes a tool, its description or the server instructions:

@@ -45,6 +45,7 @@
     "check:pack": "npm pack --dry-run --json | node scripts/check-pack.mjs",
     "check:deps": "node scripts/check-deps.mjs",
     "check:live": "npm run build && node scripts/live-check.mjs",
+    "test:live": "npm run build && vitest run --config test/live/vitest.config.ts",
     "prepack": "npm run build",
     "check": "npm run typecheck && npm test && npm run build && npm run check:pack"
   },
