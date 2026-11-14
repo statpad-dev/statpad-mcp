@@ -26,7 +26,7 @@ The MCP Inspector works the same way:
 npx @modelcontextprotocol/inspector -e STATPAD_API_KEY=sporty_... node dist/stdio.js
 ```
 
-`STATPAD_BASE_URL` points the server at another API, such as a local `sporty-api`. `STATPAD_MCP_LOG` sets the stderr log level to `debug`, `info`, `warn`, `error` or `off`.
+`STATPAD_BASE_URL` points the server at another API, such as a local `sporty-api`. `STATPAD_MCP_LOG` sets the stderr log level to `debug`, `info`, `warn`, `error` or `off`. `debug` adds one line per HTTP request, the SDK's retries included, with its method, path, status, duration and request ID.
 
 ## Layout
 

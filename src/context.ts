@@ -1,5 +1,6 @@
 import { Statpad } from '@statpad/sdk';
 
+import { type Logger, silentLogger } from './log.js';
 import { formatDuration } from './time.js';
 
 /** The most Statpad requests one tool call may send. */
@@ -14,6 +15,7 @@ export interface ClientConfig {
   baseUrl?: string | undefined;
   fetch?: typeof fetch | undefined;
   userAgent: string;
+  logger?: Logger | undefined;
 }
 
 export interface Allowance {
@@ -55,6 +57,8 @@ export class CallContext {
   readonly signal: AbortSignal;
   readonly now: () => Date;
   requests = 0;
+  /** HTTP requests actually sent, the SDK's retries included. */
+  sends = 0;
   allowance: Allowance | undefined;
   lastFailure: UpstreamFailure | undefined;
   private readonly timeout: AbortSignal;
@@ -64,6 +68,7 @@ export class CallContext {
     this.timeout = AbortSignal.timeout(options.timeoutMs ?? CALL_TIMEOUT_MS);
     this.signal = options.signal ? anySignal([this.timeout, options.signal]) : this.timeout;
     const send = config.fetch ?? ((input: RequestInfo | URL, init?: RequestInit) => globalThis.fetch(input, init));
+    const log = config.logger ?? silentLogger;
     this.statpad = new Statpad({
       apiKey: config.apiKey,
       baseUrl: config.baseUrl,
@@ -72,7 +77,21 @@ export class CallContext {
         const request = new Request(input, init);
         const headers = new Headers(request.headers);
         headers.set('User-Agent', config.userAgent);
-        const response = await send(new Request(request, { headers }));
+        const fields = { method: request.method, path: new URL(request.url).pathname, send: ++this.sends };
+        const started = Date.now();
+        let response: Response;
+        try {
+          response = await send(new Request(request, { headers }));
+        } catch (error) {
+          log('debug', 'statpad request failed', { ...fields, ms: Date.now() - started, error: error instanceof Error ? error.name : 'Error' });
+          throw error;
+        }
+        log('debug', 'statpad request', {
+          ...fields,
+          status: response.status,
+          ms: Date.now() - started,
+          request_id: response.headers.get('X-Request-Id') ?? undefined,
+        });
         this.observe(response);
         return response;
       },

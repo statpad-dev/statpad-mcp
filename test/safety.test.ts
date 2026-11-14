@@ -1,9 +1,10 @@
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { REQUEST_BUDGET } from '../src/context.js';
+import { isLogSetting, stderrLogger } from '../src/log.js';
 import { MAX_TOKENS, TARGET_TOKENS } from '../src/output.js';
 import { connect, type Harness, type HarnessOptions } from './helpers/harness.js';
-import { EPL_GAME, NCAAF_GAME, NFL_GAME, TEST_KEY } from './helpers/stub.js';
+import { EPL_GAME, NCAAF_GAME, NFL_GAME, problem, TEST_KEY } from './helpers/stub.js';
 
 let h: Harness | undefined;
 async function open(options: HarnessOptions = {}): Promise<Harness> {
@@ -101,5 +102,68 @@ describe('the allowance warning', () => {
   it('stays away at 5% or more', async () => {
     const result = await (await open({ remaining: 25_000 })).call('list_leagues');
     expect(result.json.warning).toBeUndefined();
+  });
+});
+
+describe('debug logging', () => {
+  type Line = { level: string; message: string; [field: string]: unknown };
+  const requestLines = (logs: string[]) => logs.map((line) => JSON.parse(line) as Line).filter((line) => line.level === 'debug');
+
+  it('logs every HTTP request with its path, status and request id', async () => {
+    const harness = await open();
+    await harness.call('get_game', { league: 'nfl', game_id: NFL_GAME });
+    const lines = requestLines(harness.logs);
+    expect(lines.length).toBeGreaterThan(0);
+    expect(lines[0]).toMatchObject({ message: 'statpad request', method: 'GET', status: 200, send: 1, request_id: 'req_test_0001' });
+    expect(lines.some((line) => String(line.path).endsWith(`/nfl/games/${NFL_GAME}`))).toBe(true);
+    for (const line of lines) expect(line.path).not.toContain('?');
+  });
+
+  it("counts the SDK's retry as a second request", async () => {
+    const harness = await open({ override: () => problem(429, 'rate_limited', 'Too many requests.', {}, { 'Retry-After': '1' }) });
+    await harness.call('list_leagues');
+    expect(requestLines(harness.logs).map(({ send, status }) => ({ send, status }))).toEqual([
+      { send: 1, status: 429 },
+      { send: 2, status: 429 },
+    ]);
+  });
+
+  it('logs a request that never got a response', async () => {
+    const harness = await open({
+      override: () => {
+        throw new TypeError('fetch failed');
+      },
+    });
+    await harness.call('list_leagues');
+    expect(requestLines(harness.logs)[0]).toMatchObject({ message: 'statpad request failed', send: 1, error: 'TypeError' });
+  });
+
+  it.each([
+    ['debug', true],
+    [' DEBUG ', true],
+    ['off', true],
+    ['info', true],
+    ['verbose', false],
+    ['', false],
+  ])('treats STATPAD_MCP_LOG=%j as a setting: %s', (setting, expected) => {
+    expect(isLogSetting(setting)).toBe(expected);
+  });
+
+  it.each([
+    ['info', ['info', 'warn']],
+    ['Debug', ['debug', 'info', 'warn']],
+    ['verbose', ['info', 'warn']],
+    ['off', []],
+  ])('writes the levels STATPAD_MCP_LOG=%s allows to stderr', (setting, levels) => {
+    const stderr = vi.spyOn(console, 'error').mockImplementation(() => {});
+    try {
+      const log = stderrLogger(setting);
+      log('debug', 'a');
+      log('info', 'b');
+      log('warn', 'c');
+      expect(stderr.mock.calls.map(([line]) => (JSON.parse(String(line)) as Line).level)).toEqual(levels);
+    } finally {
+      stderr.mockRestore();
+    }
   });
 });

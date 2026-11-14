@@ -105,7 +105,7 @@ Every request the server sends counts against your plan like any other request, 
 
 ## Privacy
 
-The server runs on your computer. Your key stays in your MCP client's configuration and in the server's environment. The server sends the key only to `api.statpad.dev`, in the `Authorization` header, and never puts it in a tool result or a log line. It logs one line per tool call to stderr, with the tool name, request count, duration and size, and never the arguments or the data.
+The server runs on your computer. Your key stays in your MCP client's configuration and in the server's environment. The server sends the key only to `api.statpad.dev`, in the `Authorization` header, and never puts it in a tool result or a log line. It logs one line per tool call to stderr, with the tool name, request count, duration and size, and never the arguments or the data. At the `debug` level it also logs each request's path, which holds the league and any game or team id the tool asked for, but never its query string.
 
 The agent's questions and the data it reads go to whichever AI model your client uses, under that client's terms.
 
@@ -126,7 +126,7 @@ claude mcp add --transport http statpad-docs https://statpad.dev/docs/_mcp/serve
 | `rate_limited` | The account is sending requests too fast, perhaps from another app. Wait a few seconds. |
 | `quota_exhausted` | The account used this month's allowance. The result says when it renews, or you can upgrade the plan. |
 
-Set `STATPAD_MCP_LOG=debug` in the server's environment for more detail in your client's MCP log, or `off` to silence it.
+Set `STATPAD_MCP_LOG=debug` in the server's environment to also log every request the server sends to Statpad, retries included, with its method, path, status, duration and request ID, in your client's MCP log. Set it to `off` to silence the log. Any other value logs at `info`, and the server warns about it when it starts.
 
 ## Versioning
 
