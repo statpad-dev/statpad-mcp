@@ -36,6 +36,17 @@ export class BudgetExceededError extends Error {
   override readonly name = 'BudgetExceededError';
 }
 
+/** A request to Statpad got no response: the host was unreachable or the connection failed. */
+export class NetworkError extends Error {
+  override readonly name = 'NetworkError';
+  constructor(
+    readonly host: string,
+    cause: unknown,
+  ) {
+    super(cause instanceof Error ? cause.message : String(cause), { cause });
+  }
+}
+
 /** The arguments are valid for the schema but can't be served, such as an ambiguous team name. */
 export class ToolInputError extends Error {
   override readonly name = 'ToolInputError';
@@ -77,14 +88,16 @@ export class CallContext {
         const request = new Request(input, init);
         const headers = new Headers(request.headers);
         headers.set('User-Agent', config.userAgent);
-        const fields = { method: request.method, path: new URL(request.url).pathname, send: ++this.sends };
+        const url = new URL(request.url);
+        const fields = { method: request.method, path: url.pathname, send: ++this.sends };
         const started = Date.now();
         let response: Response;
         try {
           response = await send(new Request(request, { headers }), { signal: this.signal });
         } catch (error) {
           log('debug', 'statpad request failed', { ...fields, ms: Date.now() - started, error: error instanceof Error ? error.name : 'Error' });
-          throw error;
+          if (this.signal.aborted) throw error;
+          throw new NetworkError(url.host, error);
         }
         log('debug', 'statpad request', {
           ...fields,

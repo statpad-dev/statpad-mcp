@@ -1,6 +1,7 @@
 import { StatpadError } from '@statpad/sdk';
 import { afterEach, describe, expect, it } from 'vitest';
 
+import { NetworkError } from '../src/context.js';
 import { describeError } from '../src/errors.js';
 import { connect, type Harness, type HarnessOptions } from './helpers/harness.js';
 import { NFL_GAME, problem, TEST_KEY } from './helpers/stub.js';
@@ -105,6 +106,32 @@ describe('error mapping', () => {
       })
     ).call('list_leagues');
     expect(result.json).toMatchObject({ error: 'unavailable', detail: 'fetch failed' });
+    expect(result.json.message).toContain('api.statpad.dev');
+  });
+
+  it('names the host it tried in a network failure', () => {
+    const body = describeError(new NetworkError('127.0.0.1:8090', new TypeError('fetch failed')), undefined);
+    expect(body).toMatchObject({ error: 'unavailable', detail: 'fetch failed' });
+    expect(body.message).toContain('127.0.0.1:8090');
+    expect(body.message).not.toContain('api.statpad.dev');
+  });
+
+  it("maps an answer it can't read to internal, not to a network failure", async () => {
+    const result = await (
+      await open(always(() => new Response('<html>Sign in to the Wi-Fi</html>', { status: 200, headers: { 'Content-Type': 'text/html' } })))
+    ).call('list_leagues');
+    expect(result.json.error).toBe('internal');
+    expect(result.json.message).not.toContain('network');
+  });
+
+  it.each([
+    ['list_leagues', {}],
+    ['find_teams', { league: 'nfl' }],
+  ])('maps an account without access to an account problem in %s, not a league one', async (name, args) => {
+    const result = await (await open(always(() => problem(403, 'forbidden', 'The account has no active access.')))).call(name, args);
+    expect(result.json).toMatchObject({ error: 'forbidden', detail: 'The account has no active access.' });
+    expect(result.json.message).toContain('every key on the account');
+    expect(result.json.message).not.toContain('list_leagues');
   });
 
   it('maps a call that runs out of time', async () => {
