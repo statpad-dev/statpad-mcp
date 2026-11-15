@@ -30,9 +30,9 @@ describe('error mapping', () => {
   });
 
   it('maps forbidden to the plan or an unknown alias, and points at list_leagues', async () => {
-    const result = await (await open()).call('find_teams', { league: 'nba' });
+    const result = await (await open()).call('find_teams', { league: 'nhl' });
     expect(result.json).toMatchObject({ error: 'forbidden', request_id: 'req_test_0001' });
-    expect(result.json.message).toContain('"nba"');
+    expect(result.json.message).toContain('"nhl"');
     expect(result.json.message).toContain("isn't a league Statpad serves");
     expect(result.json.message).toContain('list_leagues');
   });

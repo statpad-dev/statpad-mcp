@@ -4,7 +4,7 @@ import { REQUEST_BUDGET } from '../src/context.js';
 import { isLogSetting, stderrLogger } from '../src/log.js';
 import { MAX_TOKENS, TARGET_TOKENS } from '../src/output.js';
 import { connect, type Harness, type HarnessOptions } from './helpers/harness.js';
-import { EPL_GAME, NCAAF_GAME, NFL_GAME, problem, TEST_KEY } from './helpers/stub.js';
+import { EPL_GAME, NBA_GAME, NCAAF_GAME, NFL_GAME, problem, TEST_KEY } from './helpers/stub.js';
 
 let h: Harness | undefined;
 async function open(options: HarnessOptions = {}): Promise<Harness> {
@@ -27,18 +27,24 @@ const DEFAULT_CALLS: [string, Record<string, unknown>][] = [
   ['find_games', { league: 'nfl', from: '2026-11-01T00:00:00Z', to: '2026-12-01T00:00:00Z' }],
   ['get_game', { league: 'nfl', game_id: NFL_GAME }],
   ['get_game', { league: 'ncaaf', game_id: NCAAF_GAME }],
+  ['get_game', { league: 'nba', game_id: NBA_GAME }],
   ['get_box_score', { league: 'nfl', game_id: NFL_GAME }],
   ['get_box_score', { league: 'epl', game_id: EPL_GAME }],
+  ['get_box_score', { league: 'nba', game_id: NBA_GAME }],
   ['get_plays', { league: 'nfl', game_id: NFL_GAME }],
   ['get_plays', { league: 'nfl', game_id: NFL_GAME, mode: 'scoring' }],
   ['get_plays', { league: 'nfl', game_id: NFL_GAME, mode: 'drives' }],
   ['get_plays', { league: 'nfl', game_id: NFL_GAME, after_seq: 0 }],
   ['get_plays', { league: 'epl', game_id: EPL_GAME }],
+  ['get_plays', { league: 'nba', game_id: NBA_GAME }],
+  ['get_plays', { league: 'nba', game_id: NBA_GAME, mode: 'scoring' }],
+  ['get_plays', { league: 'nba', game_id: NBA_GAME, mode: 'drives' }],
 ];
 
 const LARGE_CALLS: [string, Record<string, unknown>][] = [
   ['get_box_score', { league: 'nfl', game_id: NFL_GAME, team: 'MIN' }],
   ['get_box_score', { league: 'nfl', game_id: NFL_GAME, category: 'defensive' }],
+  ['get_box_score', { league: 'nba', game_id: NBA_GAME, category: 'basketball' }],
   ['get_plays', { league: 'nfl', game_id: NFL_GAME, limit: 50 }],
   ['get_plays', { league: 'epl', game_id: EPL_GAME, limit: 50 }],
   ['get_plays', { league: 'nfl', game_id: NFL_GAME, after_seq: 0, limit: 50 }],
@@ -78,7 +84,7 @@ describe('the API key', () => {
   it('never appears in any result or log line', async () => {
     const harness = await open({ now: new Date('2026-11-10T03:00:00Z') });
     const texts: string[] = [];
-    for (const [name, args] of [...DEFAULT_CALLS, ...LARGE_CALLS, ['find_teams', { league: 'nba' }] as const, ['get_game', { league: 'nfl', game_id: 'x' }] as const]) {
+    for (const [name, args] of [...DEFAULT_CALLS, ...LARGE_CALLS, ['find_teams', { league: 'nhl' }] as const, ['get_game', { league: 'nfl', game_id: 'x' }] as const]) {
       const result = await harness.call(name, args);
       texts.push(result.text, JSON.stringify(result.structured ?? null));
     }

@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 
 import { MAX_TOKENS, TARGET_TOKENS } from '../src/output.js';
 import { connect, type Harness, type HarnessOptions } from './helpers/harness.js';
-import { EPL_GAME, fixture, NCAAF_GAME, NFL_GAME } from './helpers/stub.js';
+import { EPL_GAME, fixture, json, NBA_GAME, NCAAF_GAME, NFL_GAME } from './helpers/stub.js';
 
 let h: Harness | undefined;
 async function open(options: HarnessOptions = {}): Promise<Harness> {
@@ -122,6 +122,25 @@ describe('get_game', () => {
     expect(result.json.home.name).toBe('Manchester United');
     expect(result.json.live_state.soccer).toEqual({ away_formation: '4-2-3-1', away_red_cards: 0, home_formation: '4-2-3-1', home_red_cards: 0 });
   });
+
+  it('returns a final basketball game', async () => {
+    const result = await (await open()).call('get_game', { league: 'nba', game_id: NBA_GAME });
+    expect(result.json).toEqual({
+      league: 'nba',
+      game_id: NBA_GAME,
+      status: 'complete',
+      scheduled_at: '2026-11-11T00:30:00Z',
+      game_type: 'regular',
+      neutral_site: false,
+      away: { id: '01a1cc95-20d3-7c01-a80a-f8f46bc07c05', alias: 'MIL', name: 'Milwaukee Bucks' },
+      home: { id: '01a1cc95-20cf-781b-9abc-76b0ebebebb8', alias: 'NY', name: 'New York Knicks' },
+      away_score: 85,
+      home_score: 117,
+      venue: { name: 'Madison Square Garden', city: 'New York', state: 'NY' },
+      live_state: { period: 4, away_score: 85, home_score: 117, updated_at: '2026-11-11T21:48:07.746921Z' },
+      seq: 511,
+    });
+  });
 });
 
 describe('get_box_score', () => {
@@ -162,6 +181,40 @@ describe('get_box_score', () => {
     expect(result.isError).toBe(true);
     expect(result.json.message).toContain('BUF');
     expect(result.json.message).toContain('MIN');
+  });
+
+  it('ranks basketball lines by points, not by the sum of every stat', async () => {
+    const result = await (await open()).call('get_box_score', { league: 'nba', game_id: NBA_GAME });
+    expect(result.tokens).toBeLessThanOrEqual(TARGET_TOKENS);
+    expect(result.requests).toHaveLength(3);
+    expect(result.json).toMatchObject({ lines: 27, truncated: true });
+    expect(Object.keys(result.json.categories)).toEqual(['basketball']);
+    const lines = result.json.categories.basketball as { player: string; team: string; stats: { points: number } }[];
+    expect(lines.slice(0, 3).map(({ player, team, stats }) => [player, team, stats.points])).toEqual([
+      ['Jalen Brunson', 'NY', 23],
+      ['Karl-Anthony Towns', 'NY', 21],
+      ['OG Anunoby', 'NY', 19],
+    ]);
+    const points = lines.map((line) => line.stats.points);
+    expect(points).toEqual([...points].sort((a, b) => b - a));
+  });
+
+  it('breaks basketball ties by rebounds, then assists', async () => {
+    const result = await (await open()).call('get_box_score', { league: 'nba', game_id: NBA_GAME, category: 'basketball' });
+    expect(result.tokens).toBeLessThanOrEqual(MAX_TOKENS);
+    const lines = result.json.categories.basketball as { player: string; stats: { points: number } }[];
+    expect(lines).toHaveLength(27);
+    expect(lines.filter((line) => line.stats.points === 8).map((line) => line.player)).toEqual(['Kel\'el Ware', 'Ousmane Dieng', 'Pacome Dadiet', 'Miles McBride']);
+  });
+
+  it("puts a basketball team's top scorer first", async () => {
+    const result = await (await open()).call('get_box_score', { league: 'nba', game_id: NBA_GAME, team: 'mil' });
+    const lines = result.json.categories.basketball as { player: string; team: string; stats: { points: number } }[];
+    expect(result.json.lines).toBe(13);
+    expect(lines).toHaveLength(13);
+    expect(lines.every((line) => line.team === 'MIL')).toBe(true);
+    expect(lines[0]).toMatchObject({ player: 'Jaime Jaquez Jr.', stats: { points: 16, rebounds: 5, assists: 3 } });
+    expect(result.json.truncated).toBeUndefined();
   });
 
   it('lists the categories when a category filter matches nothing', async () => {
@@ -225,6 +278,47 @@ describe('get_plays', () => {
     const result = await (await open()).call('get_plays', { league: 'epl', game_id: EPL_GAME, mode: 'drives' });
     expect(result.json.drives).toEqual([]);
     expect(result.json.note).toContain('Soccer');
+  });
+
+  it('explains that football drives can still arrive before the first one', async () => {
+    const empty = (url: URL) => (url.pathname.endsWith('/play-groups') ? json({ data: [], next_cursor: null, seq: 1087 }) : undefined);
+    const result = await (await open({ live: true, override: empty })).call('get_plays', { league: 'nfl', game_id: NFL_GAME, mode: 'drives' });
+    expect(result.json.drives).toEqual([]);
+    expect(result.json.note).toContain('no drives yet');
+  });
+
+  it('returns the last plays of a basketball game', async () => {
+    const result = await (await open()).call('get_plays', { league: 'nba', game_id: NBA_GAME });
+    expect(result.json).toMatchObject({ mode: 'recent', total_plays: 454, count: 454, away_score: 85, home_score: 117, seq: 511 });
+    expect(result.json.plays).toHaveLength(10);
+    expect(result.json.plays.at(-1)).toEqual({ period: 4, clock: '0:00', type: 'game_end', description: 'End of Game', away_score: 85, home_score: 117 });
+    expect(result.tokens).toBeLessThanOrEqual(TARGET_TOKENS);
+    expect(result.requests).toHaveLength(2);
+  });
+
+  it('returns the scoring plays of a basketball game, trimmed to fit', async () => {
+    const result = await (await open()).call('get_plays', { league: 'nba', game_id: NBA_GAME, mode: 'scoring' });
+    expect(result.json.count).toBe(99);
+    expect(result.json.truncated).toBe(true);
+    expect(result.tokens).toBeLessThanOrEqual(TARGET_TOKENS);
+    expect(result.json.plays.every((play: { points?: number }) => (play.points ?? 0) > 0)).toBe(true);
+    expect(result.json.plays.at(-1)).toMatchObject({
+      period: 4,
+      clock: '1:15',
+      team: 'New York Knicks',
+      description: 'Dalton Knecht makes 23-foot three point jumper (Mohamed Diawara assists)',
+      points: 3,
+      away_score: 85,
+      home_score: 117,
+    });
+  });
+
+  it('explains that basketball has no drives', async () => {
+    const result = await (await open()).call('get_plays', { league: 'nba', game_id: NBA_GAME, mode: 'drives' });
+    expect(result.json.drives).toEqual([]);
+    expect(result.json.note).toContain('Basketball has no drives');
+    expect(result.json.note).toContain('recent or scoring');
+    expect(result.json.note).not.toContain('yet');
   });
 
   it('pages a long game, and says when the budget cannot reach the latest plays', async () => {

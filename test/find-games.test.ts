@@ -55,7 +55,7 @@ describe('find_games by date', () => {
     const harness = await open({ now });
     const newYork = await harness.call('find_games', { league: 'nfl', date: 'tomorrow' });
     expect(newYork.json).toMatchObject({ date: '2026-11-10', count: 0, games: [] });
-    expect(newYork.json.note).toContain('10 minutes before kickoff');
+    expect(newYork.json.note).toContain('10 minutes before it starts');
     const london = await harness.call('find_games', { league: 'nfl', date: 'tomorrow', tz: 'Europe/London' });
     expect(london.json.date).toBe('2026-11-11');
   });

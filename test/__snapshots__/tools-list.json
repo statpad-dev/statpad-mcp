@@ -78,7 +78,7 @@
         "league": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9]*$",
-          "description": "League alias, such as nfl, ncaaf or epl. list_leagues returns the leagues this key can read."
+          "description": "League alias, such as nfl, ncaaf, nba, ncaab or epl. list_leagues returns the leagues this key can read."
         },
         "query": {
           "description": "Team name, city, abbreviation, or a mix, such as \"vikings\", \"MIN\" or \"Minnesota\".",
@@ -165,7 +165,7 @@
   {
     "name": "find_games",
     "title": "Find games",
-    "description": "List one league's games, with ids, status, start time, teams and scores. Pass exactly one of: date, a schedule day in tz as YYYY-MM-DD, today, yesterday or tomorrow; from and to, ISO 8601 datetimes at most 31 days apart; or live: true, which reads yesterday and today in tz and keeps the games in progress, at halftime or delayed, so a game that runs past midnight still shows. team narrows the list to one team. Statpad lists a game about 10 minutes before kickoff, so a day that hasn't started yet usually comes back empty, which doesn't mean nothing is scheduled.",
+    "description": "List one league's games, with ids, status, start time, teams and scores. Pass exactly one of: date, a schedule day in tz as YYYY-MM-DD, today, yesterday or tomorrow; from and to, ISO 8601 datetimes at most 31 days apart; or live: true, which reads yesterday and today in tz and keeps the games in progress, at halftime or delayed, so a game that runs past midnight still shows. team narrows the list to one team. Statpad lists a game about 10 minutes before it starts, so a day that hasn't started yet usually comes back empty, which doesn't mean nothing is scheduled.",
     "inputSchema": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
@@ -173,7 +173,7 @@
         "league": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9]*$",
-          "description": "League alias, such as nfl, ncaaf or epl. list_leagues returns the leagues this key can read."
+          "description": "League alias, such as nfl, ncaaf, nba, ncaab or epl. list_leagues returns the leagues this key can read."
         },
         "date": {
           "description": "A schedule day in tz: YYYY-MM-DD, today, yesterday or tomorrow.",
@@ -349,7 +349,7 @@
   {
     "name": "get_game",
     "title": "Get a game",
-    "description": "Get one game's status, score and live situation: period, clock, possession and the sport's details, such as down and distance in football or the minute and red cards in soccer. live_state.updated_at says how fresh it is. Also returns the teams, the venue and seq, the game's change-stream position, which get_plays takes as after_seq. started_at and ended_at aren't filled yet, so use status. Score by period is left out until Statpad fills it.",
+    "description": "Get one game's status, score and live situation: period, clock, possession and the sport's details, such as down and distance in football, timeouts and fouls in basketball, or the minute and red cards in soccer. live_state.updated_at says how fresh it is. Also returns the teams, the venue and seq, the game's change-stream position, which get_plays takes as after_seq. started_at and ended_at aren't filled yet, so use status. Score by period is left out until Statpad fills it.",
     "inputSchema": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
@@ -357,7 +357,7 @@
         "league": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9]*$",
-          "description": "League alias, such as nfl, ncaaf or epl. list_leagues returns the leagues this key can read."
+          "description": "League alias, such as nfl, ncaaf, nba, ncaab or epl. list_leagues returns the leagues this key can read."
         },
         "game_id": {
           "type": "string",
@@ -624,7 +624,7 @@
   {
     "name": "get_box_score",
     "title": "Get a box score",
-    "description": "Get the player stat lines of one game, grouped by stat category, with player names and teams. Filter with team, an id or abbreviation; player, part of a name, ignoring accents; and category, such as passing, rushing, receiving, defensive, interceptions, fumbles, kicking, punting, kick_returns, punt_returns, soccer. With no filter on a big game it returns the top lines of each category, sets truncated and says how to see the rest. Statpad doesn't fill team totals or score by period yet. For a team total, add up that team's player lines for the category, and say the total is summed from player lines.",
+    "description": "Get the player stat lines of one game, grouped by stat category, with player names and teams. Filter with team, an id or abbreviation; player, part of a name, ignoring accents; and category, such as passing, rushing, receiving, defensive, interceptions, fumbles, kicking, punting, kick_returns, punt_returns, soccer, basketball. With no filter on a big game it returns the top lines of each category, sets truncated and says how to see the rest. Statpad doesn't fill team totals or score by period yet. For a team total, add up that team's player lines for the category, and say the total is summed from player lines.",
     "inputSchema": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
@@ -632,7 +632,7 @@
         "league": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9]*$",
-          "description": "League alias, such as nfl, ncaaf or epl. list_leagues returns the leagues this key can read."
+          "description": "League alias, such as nfl, ncaaf, nba, ncaab or epl. list_leagues returns the leagues this key can read."
         },
         "game_id": {
           "type": "string",
@@ -653,7 +653,7 @@
           "maxLength": 100
         },
         "category": {
-          "description": "Only this stat category, such as passing, rushing, receiving, defensive, interceptions, fumbles, kicking, punting, kick_returns, punt_returns, soccer.",
+          "description": "Only this stat category, such as passing, rushing, receiving, defensive, interceptions, fumbles, kicking, punting, kick_returns, punt_returns, soccer, basketball.",
           "type": "string",
           "pattern": "^[a-z_]+$"
         }
@@ -833,7 +833,7 @@
   {
     "name": "get_plays",
     "title": "Get plays",
-    "description": "Get a game's play-by-play. mode recent returns the last plays, 10 by default; scoring returns the scoring plays, up to 50; drives returns drives or at-bats with team, result, yards, points and time of possession. Each play has the period, clock, team, description and the score after it. In NFL and NCAAF the description names the players. Every result has seq. To follow a live game, pass that seq back as after_seq to get only the plays and live-state changes since, then pass the new seq on the next call. If the stream no longer holds after_seq, the result has resync_required and a fresh seq from a new game read.",
+    "description": "Get a game's play-by-play. mode recent returns the last plays, 10 by default; scoring returns the scoring plays, up to 50; drives returns drives or at-bats with team, result, yards, points and time of possession, and basketball and soccer have none. Each play has the period, clock, team, description and the score after it. The description names the players. Every result has seq. To follow a live game, pass that seq back as after_seq to get only the plays and live-state changes since, then pass the new seq on the next call. If the stream no longer holds after_seq, the result has resync_required and a fresh seq from a new game read.",
     "inputSchema": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
@@ -841,7 +841,7 @@
         "league": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9]*$",
-          "description": "League alias, such as nfl, ncaaf or epl. list_leagues returns the leagues this key can read."
+          "description": "League alias, such as nfl, ncaaf, nba, ncaab or epl. list_leagues returns the leagues this key can read."
         },
         "game_id": {
           "type": "string",

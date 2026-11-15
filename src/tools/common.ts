@@ -22,7 +22,7 @@ export function defineTool<I extends z.ZodObject, O extends z.ZodObject>(tool: T
 export const leagueArg = z
   .string()
   .regex(/^[a-z][a-z0-9]*$/, 'A league alias is lowercase letters and digits, such as nfl.')
-  .describe('League alias, such as nfl, ncaaf or epl. list_leagues returns the leagues this key can read.');
+  .describe('League alias, such as nfl, ncaaf, nba, ncaab or epl. list_leagues returns the leagues this key can read.');
 
 export const gameIdArg = z.guid().describe('Game id, from find_games.');
 

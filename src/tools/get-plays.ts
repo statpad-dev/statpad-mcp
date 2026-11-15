@@ -26,6 +26,12 @@ const PLAYS_PAGE = 1_000;
 const CHANGES_PAGE = 500;
 const MAX_LIMIT = 50;
 
+/** The sport of each league Statpad serves, for the note on a game without drives. */
+const SPORTS: Record<string, string> = { nfl: 'football', ncaaf: 'football', epl: 'soccer', nba: 'basketball', ncaab: 'basketball' };
+
+/** Statuses after which a game gets no more drives. */
+const FINISHED = new Set<GameDetail['game']['status']>(['complete', 'closed', 'cancelled']);
+
 const driveSchema = z.object({
   kind: z.string().describe('drive, at_bat or possession.'),
   period: z.number(),
@@ -98,7 +104,7 @@ export const getPlays = defineTool({
   name: 'get_plays',
   title: 'Get plays',
   description:
-    "Get a game's play-by-play. mode recent returns the last plays, 10 by default; scoring returns the scoring plays, up to 50; drives returns drives or at-bats with team, result, yards, points and time of possession. Each play has the period, clock, team, description and the score after it. In NFL and NCAAF the description names the players. Every result has seq. To follow a live game, pass that seq back as after_seq to get only the plays and live-state changes since, then pass the new seq on the next call. If the stream no longer holds after_seq, the result has resync_required and a fresh seq from a new game read.",
+    "Get a game's play-by-play. mode recent returns the last plays, 10 by default; scoring returns the scoring plays, up to 50; drives returns drives or at-bats with team, result, yards, points and time of possession, and basketball and soccer have none. Each play has the period, clock, team, description and the score after it. The description names the players. Every result has seq. To follow a live game, pass that seq back as after_seq to get only the plays and live-state changes since, then pass the new seq on the next call. If the stream no longer holds after_seq, the result has resync_required and a fresh seq from a new game read.",
   input,
   output,
   async run(args, ctx) {
@@ -176,15 +182,26 @@ async function drives(args: Args, ctx: CallContext): Promise<Output> {
   const result: Output = build(kept);
 
   if (groups.data.length === 0) {
-    return {
-      ...result,
-      note: 'This game has no drives or at-bats yet. Soccer events belong to no group, so use mode recent or scoring for a soccer match.',
-    };
+    return { ...result, note: noDrivesNote(args.league, detail.game.status) };
   }
   if (kept < views.length || groups.next_cursor !== null) {
     return { ...result, truncated: true, hint: `Showing the last ${kept} drives. Pass a limit for fewer.` };
   }
   return result;
+}
+
+function noDrivesNote(league: string, status: GameDetail['game']['status']): string {
+  switch (SPORTS[league]) {
+    case 'football':
+      if (FINISHED.has(status)) return 'Statpad has no drives for this game. Use mode recent or scoring for its plays.';
+      return 'This game has no drives yet. They appear once the first drive starts.';
+    case 'basketball':
+      return 'Basketball has no drives, so use mode recent or scoring for this game.';
+    case 'soccer':
+      return 'Soccer has no drives, so use mode recent or scoring for this match.';
+    default:
+      return 'This game has no drives or at-bats. Use mode recent or scoring for its plays.';
+  }
 }
 
 function driveView(group: PlayGroup, teams: TeamIndex): z.output<typeof driveSchema> {
