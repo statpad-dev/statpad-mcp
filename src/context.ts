@@ -81,7 +81,7 @@ export class CallContext {
         const started = Date.now();
         let response: Response;
         try {
-          response = await send(new Request(request, { headers }));
+          response = await send(new Request(request, { headers }), { signal: this.signal });
         } catch (error) {
           log('debug', 'statpad request failed', { ...fields, ms: Date.now() - started, error: error instanceof Error ? error.name : 'Error' });
           throw error;
