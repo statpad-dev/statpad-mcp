@@ -56,6 +56,7 @@ function registerTool(server: McpServer, tool: Tool<any, any>, options: StatpadM
     baseUrl: options.baseUrl,
     fetch: options.fetch,
     userAgent: `statpad-mcp/${VERSION} (${options.transport ?? 'stdio'})`,
+    logger: log,
   };
   const redact = (text: string) => (options.apiKey ? text.split(options.apiKey).join('[redacted]') : text);
 

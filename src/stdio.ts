@@ -2,7 +2,7 @@
 import { serveStdio } from '@modelcontextprotocol/server/stdio';
 
 import { isWellFormedApiKey } from './key.js';
-import { stderrLogger } from './log.js';
+import { isLogSetting, stderrLogger } from './log.js';
 import { createStatpadMcpServer } from './server.js';
 import { VERSION } from './version.js';
 
@@ -22,7 +22,11 @@ if (!isWellFormedApiKey(apiKey)) {
   process.exit(1);
 }
 
-const logger = stderrLogger(process.env.STATPAD_MCP_LOG);
+const logSetting = process.env.STATPAD_MCP_LOG;
+const logger = stderrLogger(logSetting);
+if (logSetting && !isLogSetting(logSetting)) {
+  logger('warn', `STATPAD_MCP_LOG=${logSetting} isn't a log level, so the server logs at info. Use debug, info, warn, error or off.`);
+}
 
 serveStdio(
   () =>
