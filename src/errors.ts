@@ -1,6 +1,6 @@
 import { StatpadError } from '@statpad/sdk';
 
-import { BudgetExceededError, CALL_TIMEOUT_MS, type CallContext, ToolInputError } from './context.js';
+import { BudgetExceededError, CALL_TIMEOUT_MS, type CallContext, NetworkError, ToolInputError } from './context.js';
 
 /** The JSON body of an isError tool result. */
 export interface ToolErrorBody {
@@ -14,6 +14,8 @@ export interface ToolErrorBody {
   [key: string]: unknown;
 }
 
+const ACCOUNT_INACTIVE = 'The account has no active access.';
+
 /** Turns anything a tool threw into a message written for the model that called it. */
 export function describeError(error: unknown, ctx: CallContext | undefined, league?: string): ToolErrorBody {
   if (error instanceof StatpadError) return describeStatpadError(error, league);
@@ -26,14 +28,18 @@ export function describeError(error: unknown, ctx: CallContext | undefined, leag
   }
   if (ctx?.timedOut) return describeTimeout(ctx);
   if (ctx?.signal.aborted) return { error: 'cancelled', message: 'The client cancelled this call.' };
-  if (error instanceof TypeError) {
+  if (error instanceof NetworkError) {
     return {
       error: 'unavailable',
-      message: "statpad-mcp couldn't reach api.statpad.dev. Check the network connection, then try again.",
+      message: `statpad-mcp couldn't reach ${error.host}. Check the network connection, then try again.`,
       detail: error.message,
     };
   }
-  return { error: 'internal', message: 'statpad-mcp failed unexpectedly.', detail: error instanceof Error ? error.message : String(error) };
+  return {
+    error: 'internal',
+    message: "statpad-mcp failed unexpectedly, either from a bug in the server or an answer from Statpad it couldn't read. Retrying probably won't help, so tell the user.",
+    detail: error instanceof Error ? error.message : String(error),
+  };
 }
 
 function describeStatpadError(error: StatpadError, league: string | undefined): ToolErrorBody {
@@ -47,6 +53,13 @@ function describeStatpadError(error: StatpadError, league: string | undefined): 
         ...base,
       };
     case 'forbidden':
+      if (!league || error.detail === ACCOUNT_INACTIVE) {
+        return {
+          error: 'forbidden',
+          message: `Statpad won't serve this key: ${error.detail ?? 'the account has no active access'} The trial or subscription may have ended or the account may be suspended, and that affects every key on the account. Retrying won't help, so tell the user to check their plan at https://app.statpad.dev.`,
+          ...base,
+        };
+      }
       return {
         error: 'forbidden',
         message:
