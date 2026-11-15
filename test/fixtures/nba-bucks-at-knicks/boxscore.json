@@ -1,0 +1,737 @@
+{
+  "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+  "period_scores": [],
+  "players": [
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20e3-7c17-bd0b-c3fab185b717",
+      "stats": {
+        "basketball": {
+          "assists": 3,
+          "blocks": 1,
+          "defensive_rebounds": 3,
+          "field_goals_att": 4,
+          "field_goals_made": 1,
+          "free_throws_att": 2,
+          "free_throws_made": 2,
+          "minutes": 26,
+          "offensive_rebounds": 2,
+          "personal_fouls": 2,
+          "plus_minus": -14,
+          "points": 5,
+          "rebounds": 5,
+          "steals": 0,
+          "three_points_att": 3,
+          "three_points_made": 1,
+          "turnovers": 1
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20f4-7b3e-8ba2-a278e0349f98",
+      "stats": {
+        "basketball": {
+          "assists": 3,
+          "blocks": 0,
+          "defensive_rebounds": 3,
+          "field_goals_att": 13,
+          "field_goals_made": 6,
+          "free_throws_att": 2,
+          "free_throws_made": 2,
+          "minutes": 25,
+          "offensive_rebounds": 2,
+          "personal_fouls": 3,
+          "plus_minus": -2,
+          "points": 16,
+          "rebounds": 5,
+          "steals": 1,
+          "three_points_att": 5,
+          "three_points_made": 2,
+          "turnovers": 4
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20f5-73af-ba08-6b4cd6ea6707",
+      "stats": {
+        "basketball": {
+          "assists": 2,
+          "blocks": 1,
+          "defensive_rebounds": 2,
+          "field_goals_att": 7,
+          "field_goals_made": 1,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 27,
+          "offensive_rebounds": 1,
+          "personal_fouls": 3,
+          "plus_minus": -24,
+          "points": 3,
+          "rebounds": 3,
+          "steals": 0,
+          "three_points_att": 6,
+          "three_points_made": 1,
+          "turnovers": 2
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20f6-772e-b1ae-99ed8445d8b0",
+      "stats": {
+        "basketball": {
+          "assists": 2,
+          "blocks": 0,
+          "defensive_rebounds": 4,
+          "field_goals_att": 9,
+          "field_goals_made": 5,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 24,
+          "offensive_rebounds": 1,
+          "personal_fouls": 3,
+          "plus_minus": -10,
+          "points": 14,
+          "rebounds": 5,
+          "steals": 1,
+          "three_points_att": 6,
+          "three_points_made": 4,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20f7-7204-9372-a315e7d8b48f",
+      "stats": {
+        "basketball": {
+          "assists": 3,
+          "blocks": 0,
+          "defensive_rebounds": 3,
+          "field_goals_att": 6,
+          "field_goals_made": 1,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 26,
+          "offensive_rebounds": 0,
+          "personal_fouls": 2,
+          "plus_minus": -23,
+          "points": 3,
+          "rebounds": 3,
+          "steals": 0,
+          "three_points_att": 4,
+          "three_points_made": 1,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20f7-7205-a391-188f6d2631d4",
+      "stats": {
+        "basketball": {
+          "assists": 0,
+          "blocks": 0,
+          "defensive_rebounds": 3,
+          "field_goals_att": 8,
+          "field_goals_made": 3,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 24,
+          "offensive_rebounds": 0,
+          "personal_fouls": 1,
+          "plus_minus": -22,
+          "points": 8,
+          "rebounds": 3,
+          "steals": 0,
+          "three_points_att": 5,
+          "three_points_made": 2,
+          "turnovers": 1
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20f7-7ba6-b03c-c7f03083b733",
+      "stats": {
+        "basketball": {
+          "assists": 1,
+          "blocks": 0,
+          "defensive_rebounds": 2,
+          "field_goals_att": 8,
+          "field_goals_made": 4,
+          "free_throws_att": 1,
+          "free_throws_made": 0,
+          "minutes": 22,
+          "offensive_rebounds": 0,
+          "personal_fouls": 2,
+          "plus_minus": -13,
+          "points": 10,
+          "rebounds": 2,
+          "steals": 2,
+          "three_points_att": 5,
+          "three_points_made": 2,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20f8-7458-8880-be9c6c25fd1a",
+      "stats": {
+        "basketball": {
+          "assists": 1,
+          "blocks": 0,
+          "defensive_rebounds": 2,
+          "field_goals_att": 0,
+          "field_goals_made": 0,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 4,
+          "offensive_rebounds": 0,
+          "personal_fouls": 0,
+          "plus_minus": -9,
+          "points": 0,
+          "rebounds": 2,
+          "steals": 0,
+          "three_points_att": 0,
+          "three_points_made": 0,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20f9-7738-ae2f-913dc2331b5a",
+      "stats": {
+        "basketball": {
+          "assists": 0,
+          "blocks": 0,
+          "defensive_rebounds": 0,
+          "field_goals_att": 1,
+          "field_goals_made": 1,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 8,
+          "offensive_rebounds": 0,
+          "personal_fouls": 1,
+          "plus_minus": -10,
+          "points": 2,
+          "rebounds": 0,
+          "steals": 0,
+          "three_points_att": 0,
+          "three_points_made": 0,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fa-7100-83f7-60135fddf530",
+      "stats": {
+        "basketball": {
+          "assists": 1,
+          "blocks": 2,
+          "defensive_rebounds": 3,
+          "field_goals_att": 6,
+          "field_goals_made": 2,
+          "free_throws_att": 4,
+          "free_throws_made": 4,
+          "minutes": 17,
+          "offensive_rebounds": 1,
+          "personal_fouls": 5,
+          "plus_minus": 1,
+          "points": 8,
+          "rebounds": 4,
+          "steals": 0,
+          "three_points_att": 0,
+          "three_points_made": 0,
+          "turnovers": 2
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fa-78fb-8fbc-5036b827977b",
+      "stats": {
+        "basketball": {
+          "assists": 0,
+          "blocks": 0,
+          "defensive_rebounds": 0,
+          "field_goals_att": 4,
+          "field_goals_made": 2,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 6,
+          "offensive_rebounds": 0,
+          "personal_fouls": 2,
+          "plus_minus": -4,
+          "points": 5,
+          "rebounds": 0,
+          "steals": 1,
+          "three_points_att": 3,
+          "three_points_made": 1,
+          "turnovers": 1
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fa-78fc-bd4f-4a3dd3f77a2a",
+      "stats": {
+        "basketball": {
+          "assists": 0,
+          "blocks": 0,
+          "defensive_rebounds": 0,
+          "field_goals_att": 1,
+          "field_goals_made": 0,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 8,
+          "offensive_rebounds": 0,
+          "personal_fouls": 0,
+          "plus_minus": -14,
+          "points": 0,
+          "rebounds": 0,
+          "steals": 1,
+          "three_points_att": 1,
+          "three_points_made": 0,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fb-7199-afc6-f3c364022f35",
+      "stats": {
+        "basketball": {
+          "assists": 4,
+          "blocks": 0,
+          "defensive_rebounds": 0,
+          "field_goals_att": 12,
+          "field_goals_made": 4,
+          "free_throws_att": 1,
+          "free_throws_made": 1,
+          "minutes": 23,
+          "offensive_rebounds": 0,
+          "personal_fouls": 1,
+          "plus_minus": -16,
+          "points": 11,
+          "rebounds": 0,
+          "steals": 1,
+          "three_points_att": 6,
+          "three_points_made": 2,
+          "turnovers": 1
+        }
+      },
+      "team_id": "01a1cc95-20d3-7c01-a80a-f8f46bc07c05",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fb-7a21-86b4-99fd992c76a9",
+      "stats": {
+        "basketball": {
+          "assists": 2,
+          "blocks": 0,
+          "defensive_rebounds": 2,
+          "field_goals_att": 12,
+          "field_goals_made": 6,
+          "free_throws_att": 2,
+          "free_throws_made": 2,
+          "minutes": 29,
+          "offensive_rebounds": 1,
+          "personal_fouls": 0,
+          "plus_minus": 26,
+          "points": 19,
+          "rebounds": 3,
+          "steals": 0,
+          "three_points_att": 8,
+          "three_points_made": 5,
+          "turnovers": 1
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fc-7394-8d73-1f52e36be17f",
+      "stats": {
+        "basketball": {
+          "assists": 3,
+          "blocks": 1,
+          "defensive_rebounds": 13,
+          "field_goals_att": 14,
+          "field_goals_made": 5,
+          "free_throws_att": 14,
+          "free_throws_made": 9,
+          "minutes": 27,
+          "offensive_rebounds": 3,
+          "personal_fouls": 1,
+          "plus_minus": 21,
+          "points": 21,
+          "rebounds": 16,
+          "steals": 2,
+          "three_points_att": 9,
+          "three_points_made": 2,
+          "turnovers": 3
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fc-7395-bcfc-a695333c0fd1",
+      "stats": {
+        "basketball": {
+          "assists": 1,
+          "blocks": 1,
+          "defensive_rebounds": 3,
+          "field_goals_att": 6,
+          "field_goals_made": 2,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 17,
+          "offensive_rebounds": 2,
+          "personal_fouls": 0,
+          "plus_minus": -4,
+          "points": 4,
+          "rebounds": 5,
+          "steals": 3,
+          "three_points_att": 0,
+          "three_points_made": 0,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fc-7c84-bfa9-796b4e7b7c58",
+      "stats": {
+        "basketball": {
+          "assists": 2,
+          "blocks": 0,
+          "defensive_rebounds": 2,
+          "field_goals_att": 7,
+          "field_goals_made": 4,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 28,
+          "offensive_rebounds": 1,
+          "personal_fouls": 2,
+          "plus_minus": 24,
+          "points": 10,
+          "rebounds": 3,
+          "steals": 0,
+          "three_points_att": 5,
+          "three_points_made": 2,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fd-797d-a003-803c4c18a368",
+      "stats": {
+        "basketball": {
+          "assists": 2,
+          "blocks": 0,
+          "defensive_rebounds": 4,
+          "field_goals_att": 18,
+          "field_goals_made": 7,
+          "free_throws_att": 8,
+          "free_throws_made": 8,
+          "minutes": 28,
+          "offensive_rebounds": 0,
+          "personal_fouls": 1,
+          "plus_minus": 5,
+          "points": 23,
+          "rebounds": 4,
+          "steals": 0,
+          "three_points_att": 3,
+          "three_points_made": 1,
+          "turnovers": 1
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fd-797e-b80c-95c97e094120",
+      "stats": {
+        "basketball": {
+          "assists": 0,
+          "blocks": 0,
+          "defensive_rebounds": 0,
+          "field_goals_att": 2,
+          "field_goals_made": 1,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 8,
+          "offensive_rebounds": 0,
+          "personal_fouls": 1,
+          "plus_minus": -2,
+          "points": 3,
+          "rebounds": 0,
+          "steals": 0,
+          "three_points_att": 2,
+          "three_points_made": 1,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fe-7228-9fc8-305305a4162a",
+      "stats": {
+        "basketball": {
+          "assists": 0,
+          "blocks": 0,
+          "defensive_rebounds": 1,
+          "field_goals_att": 5,
+          "field_goals_made": 3,
+          "free_throws_att": 1,
+          "free_throws_made": 1,
+          "minutes": 6,
+          "offensive_rebounds": 1,
+          "personal_fouls": 0,
+          "plus_minus": 4,
+          "points": 8,
+          "rebounds": 2,
+          "steals": 0,
+          "three_points_att": 3,
+          "three_points_made": 1,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fe-7229-9df8-666bd6a791c7",
+      "stats": {
+        "basketball": {
+          "assists": 3,
+          "blocks": 0,
+          "defensive_rebounds": 3,
+          "field_goals_att": 6,
+          "field_goals_made": 2,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 18,
+          "offensive_rebounds": 0,
+          "personal_fouls": 2,
+          "plus_minus": 9,
+          "points": 5,
+          "rebounds": 3,
+          "steals": 0,
+          "three_points_att": 4,
+          "three_points_made": 1,
+          "turnovers": 2
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20fe-7a11-bd77-11605c02b24d",
+      "stats": {
+        "basketball": {
+          "assists": 3,
+          "blocks": 0,
+          "defensive_rebounds": 9,
+          "field_goals_att": 1,
+          "field_goals_made": 1,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 16,
+          "offensive_rebounds": 5,
+          "personal_fouls": 1,
+          "plus_minus": 7,
+          "points": 2,
+          "rebounds": 14,
+          "steals": 0,
+          "three_points_att": 0,
+          "three_points_made": 0,
+          "turnovers": 1
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20ff-72c6-ad78-38bf23948f1a",
+      "stats": {
+        "basketball": {
+          "assists": 0,
+          "blocks": 0,
+          "defensive_rebounds": 0,
+          "field_goals_att": 0,
+          "field_goals_made": 0,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 5,
+          "offensive_rebounds": 1,
+          "personal_fouls": 0,
+          "plus_minus": 4,
+          "points": 0,
+          "rebounds": 1,
+          "steals": 1,
+          "three_points_att": 0,
+          "three_points_made": 0,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20ff-72c7-a41b-556bd475823c",
+      "stats": {
+        "basketball": {
+          "assists": 2,
+          "blocks": 0,
+          "defensive_rebounds": 1,
+          "field_goals_att": 5,
+          "field_goals_made": 1,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 11,
+          "offensive_rebounds": 3,
+          "personal_fouls": 1,
+          "plus_minus": 0,
+          "points": 2,
+          "rebounds": 4,
+          "steals": 0,
+          "three_points_att": 1,
+          "three_points_made": 0,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-20ff-7b4e-b36f-511ded6e9dab",
+      "stats": {
+        "basketball": {
+          "assists": 1,
+          "blocks": 0,
+          "defensive_rebounds": 1,
+          "field_goals_att": 1,
+          "field_goals_made": 0,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 6,
+          "offensive_rebounds": 0,
+          "personal_fouls": 1,
+          "plus_minus": 4,
+          "points": 0,
+          "rebounds": 1,
+          "steals": 0,
+          "three_points_att": 1,
+          "three_points_made": 0,
+          "turnovers": 1
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-2100-73f6-9508-7150c4b3492c",
+      "stats": {
+        "basketball": {
+          "assists": 3,
+          "blocks": 0,
+          "defensive_rebounds": 0,
+          "field_goals_att": 6,
+          "field_goals_made": 3,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 25,
+          "offensive_rebounds": 0,
+          "personal_fouls": 1,
+          "plus_minus": 39,
+          "points": 8,
+          "rebounds": 0,
+          "steals": 1,
+          "three_points_att": 5,
+          "three_points_made": 2,
+          "turnovers": 0
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    },
+    {
+      "game_id": "01a1cc95-20c8-7721-84c6-e62c8742d14f",
+      "player_id": "01a1cc95-2100-73f7-80b9-dcc7648649de",
+      "stats": {
+        "basketball": {
+          "assists": 4,
+          "blocks": 1,
+          "defensive_rebounds": 2,
+          "field_goals_att": 6,
+          "field_goals_made": 5,
+          "free_throws_att": 0,
+          "free_throws_made": 0,
+          "minutes": 15,
+          "offensive_rebounds": 1,
+          "personal_fouls": 2,
+          "plus_minus": 23,
+          "points": 12,
+          "rebounds": 3,
+          "steals": 0,
+          "three_points_att": 3,
+          "three_points_made": 2,
+          "turnovers": 1
+        }
+      },
+      "team_id": "01a1cc95-20cf-781b-9abc-76b0ebebebb8",
+      "version": 1
+    }
+  ],
+  "seq": 511,
+  "teams": []
+}

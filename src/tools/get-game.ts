@@ -18,7 +18,7 @@ export const getGameTool = defineTool({
   name: 'get_game',
   title: 'Get a game',
   description:
-    "Get one game's status, score and live situation: period, clock, possession and the sport's details, such as down and distance in football or the minute and red cards in soccer. live_state.updated_at says how fresh it is. Also returns the teams, the venue and seq, the game's change-stream position, which get_plays takes as after_seq. started_at and ended_at aren't filled yet, so use status. Score by period is left out until Statpad fills it.",
+    "Get one game's status, score and live situation: period, clock, possession and the sport's details, such as down and distance in football, timeouts and fouls in basketball, or the minute and red cards in soccer. live_state.updated_at says how fresh it is. Also returns the teams, the venue and seq, the game's change-stream position, which get_plays takes as after_seq. started_at and ended_at aren't filled yet, so use status. Score by period is left out until Statpad fills it.",
   input: z.object({ league: leagueArg, game_id: gameIdArg }),
   output: outputSchema({
     league: z.string(),

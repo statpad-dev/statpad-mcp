@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 import type { Change, Game, GameDetail, Play, Team } from '@statpad/sdk';
 
@@ -8,6 +8,7 @@ export const TEST_KEY = 'sporty_AbCdEfGhIjKlMnOp.QRSTUVWXYZabcdefghijklmnopqrstu
 
 export const NFL_GAME = '01a1cca4-3e00-7e94-bcef-b47bbed025f0';
 export const EPL_GAME = '01a1cca4-bb93-77d8-8fd9-e865faca45b5';
+export const NBA_GAME = '01a1cc95-20c8-7721-84c6-e62c8742d14f';
 export const NCAAF_GAME = '01a1b987-64e7-74e3-8db1-b939d352190d';
 export const JAX_AT_BAL = '01a1b987-644f-7459-b8e0-810b314f71da';
 export const BILLS = '01a1cca4-3e05-7c90-a80f-05893446d191';
@@ -24,15 +25,17 @@ interface Sample {
 const SAMPLES: Record<string, Sample> = {
   [NFL_GAME]: { dir: 'nfl-bills-at-vikings', league: 'nfl' },
   [EPL_GAME]: { dir: 'epl-man-utd-aston-villa', league: 'epl' },
+  [NBA_GAME]: { dir: 'nba-bucks-at-knicks', league: 'nba' },
 };
 
-const LIVE_LEAGUES = new Set(['nfl', 'ncaaf', 'epl']);
+const LIVE_LEAGUES = new Set(['nfl', 'ncaaf', 'epl', 'nba']);
 
-/** The game reads the stub serves: the two samples and the getGame example from api/openapi.yaml. */
+/** The game reads the stub serves: the samples and the getGame example from api/openapi.yaml. */
 function gameDetails(live: boolean): Map<string, GameDetail> {
   const details = new Map<string, GameDetail>();
   details.set(NFL_GAME, fixture<GameDetail>(`nfl-bills-at-vikings/${live ? 'game-live' : 'game'}.json`));
   details.set(EPL_GAME, fixture<GameDetail>('epl-man-utd-aston-villa/game.json'));
+  details.set(NBA_GAME, fixture<GameDetail>('nba-bucks-at-knicks/game.json'));
   details.set(NCAAF_GAME, fixture<GameDetail>('openapi/getGame.json'));
   return details;
 }
@@ -48,12 +51,14 @@ function leagueData(details: Map<string, GameDetail>): Record<string, { games: G
   const nfl = details.get(NFL_GAME)!;
   const epl = details.get(EPL_GAME)!;
   const ncaaf = details.get(NCAAF_GAME)!;
+  const nba = details.get(NBA_GAME)!;
   const byMarket = (a: Team, b: Team) => a.market.localeCompare(b.market) || a.name.localeCompare(b.name);
   const unique = (teams: Team[]) => [...new Map(teams.map((team) => [team.id, team])).values()].sort(byMarket);
   return {
     nfl: { games: [...listGames.data, nfl.game], teams: unique([...listTeams.data, ...listGames.teams, nfl.away_team, nfl.home_team]) },
     ncaaf: { games: [ncaaf.game], teams: unique([ncaaf.away_team, ncaaf.home_team]) },
     epl: { games: [epl.game], teams: unique([epl.away_team, epl.home_team]) },
+    nba: { games: [nba.game], teams: unique([nba.away_team, nba.home_team]) },
   };
 }
 
@@ -62,7 +67,7 @@ export interface StubOptions {
   live?: boolean;
   /** Requests left in the period, for the RateLimit header. */
   remaining?: number;
-  /** The oldest seq the NFL change stream still holds. */
+  /** The oldest seq a sample's change stream still holds. */
   minSeq?: number;
   /** Replaces a league's teams. */
   teams?: Record<string, Team[]>;
@@ -118,13 +123,13 @@ export function createStub(options: StubOptions = {}): Stub {
       case 'plays':
         return listPlays(url, sample, options.plays);
       case 'play-groups':
-        return sample?.league === 'nfl' ? json(fixture(`${sample.dir}/play-groups.json`)) : json({ data: [], next_cursor: null, seq: detail.seq });
+        return sample && hasFile(sample, 'play-groups.json') ? json(fixture(`${sample.dir}/play-groups.json`)) : json({ data: [], next_cursor: null, seq: detail.seq });
       case 'boxscore':
         return sample ? json(fixture(`${sample.dir}/boxscore.json`)) : missing();
       case 'roster':
         return sample ? json(fixture(`${sample.dir}/roster.json`)) : missing();
       case 'changes':
-        return listChanges(url, gameId, options.minSeq ?? 1);
+        return listChanges(url, gameId, sample, options.minSeq ?? 1);
       default:
         return problem(404, 'not_found', 'No such endpoint.');
     }
@@ -161,9 +166,13 @@ function listPlays(url: URL, sample: Sample | undefined, override: Play[] | unde
   return json({ data: plays.slice(offset, offset + limit), next_cursor: next, seq: page.seq });
 }
 
-function listChanges(url: URL, gameId: string, minSeq: number): Response {
-  if (gameId !== NFL_GAME) return json({ stream: `game:${gameId}`, data: [], head_seq: 0, min_seq: 0 });
-  const changes = readFileSync(new URL('../fixtures/nfl-bills-at-vikings/changes.ndjson', import.meta.url), 'utf8')
+function hasFile(sample: Sample, name: string): boolean {
+  return existsSync(new URL(`../fixtures/${sample.dir}/${name}`, import.meta.url));
+}
+
+function listChanges(url: URL, gameId: string, sample: Sample | undefined, minSeq: number): Response {
+  if (!sample || !hasFile(sample, 'changes.ndjson')) return json({ stream: `game:${gameId}`, data: [], head_seq: 0, min_seq: 0 });
+  const changes = readFileSync(new URL(`../fixtures/${sample.dir}/changes.ndjson`, import.meta.url), 'utf8')
     .split('\n')
     .filter((line) => line.trim() !== '')
     .map((line) => JSON.parse(line) as Change);

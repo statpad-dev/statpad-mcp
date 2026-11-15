@@ -19,6 +19,7 @@ const RANK_BY: Record<string, string[]> = {
   kick_returns: ['yards', 'returns'],
   punt_returns: ['yards', 'returns'],
   soccer: ['total_goals', 'goal_assists', 'saves', 'shots_on_target', 'total_shots'],
+  basketball: ['points', 'rebounds', 'assists'],
 };
 
 const KNOWN_CATEGORIES = Object.keys(RANK_BY);
