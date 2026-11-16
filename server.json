@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.statpad-dev/statpad-mcp",
   "title": "Statpad",
-  "description": "Live NFL, college football and Premier League scores, play-by-play and box scores from Statpad.",
+  "description": "Live NFL, NBA, NHL, college football and basketball, and European soccer scores and play-by-play.",
   "websiteUrl": "https://statpad.dev/docs",
   "repository": {
     "url": "https://github.com/statpad-dev/statpad-mcp",

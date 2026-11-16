@@ -10,11 +10,11 @@ Every answer must also avoid these misses: inventing data the tools didn't retur
 
 1. **Which sports can you get data for?**
    - Calls: `list_leagues()`.
-   - Must contain: each league `list_leagues` returns, today NFL, NCAA FBS football and the Premier League. Must not claim the NBA, MLB or NHL.
+   - Must contain: each league `list_leagues` returns, today NFL, NBA, NHL, NCAA football and men's basketball, the Premier League, LaLiga, Bundesliga, Serie A and Ligue 1. Must not claim MLB.
 
-2. **What was the score of last night's Lakers game?**
+2. **What was the score of last night's Yankees game?**
    - Calls: `list_leagues()`, or none if the agent already has it.
-   - Must decline: Statpad doesn't cover the NBA on this key. Must not guess a score.
+   - Must decline: Statpad doesn't cover MLB. Must not guess a score.
 
 3. **Show me the NFL standings.**
    - Calls: none.
@@ -48,15 +48,15 @@ Every answer must also avoid these misses: inventing data the tools didn't retur
 
 10. **What NFL games are on today?**
     - Calls: `find_games(league: nfl, date: today)`.
-    - Must contain: each game's teams and start time in the user's time zone, from `local_time` or a correct conversion of `scheduled_at`. If the list is empty, must say that games appear about 10 minutes before kickoff, not that there are no games.
+    - Must contain: each game's teams and start time in the user's time zone, from `local_time` or a correct conversion of `scheduled_at`. If the list is empty, must say that nothing is scheduled yet or that the teams aren't known yet, not invent games.
 
 11. **What Premier League matches are on tomorrow? I'm in London.**
     - Calls: `find_games(league: epl, date: tomorrow, tz: Europe/London)`.
-    - Must contain: the resolved date. If the list is empty, the same 10-minute caveat as question 10.
+    - Must contain: the resolved date. If the list is empty, the same caveat as question 10: nothing is scheduled yet, or the teams aren't known yet.
 
 12. **When do the Bills play next?**
     - Calls: `find_games(league: nfl, team: Bills, from: now, to: now plus up to 31 days)`.
-    - Must contain: the next game if one is listed. If none is, must say the schedule shows games only shortly before kickoff, not that the Bills have no games.
+    - Must contain: the next game if one is listed. If none is, must say no game is scheduled in that range yet, not that the Bills have no more games.
 
 13. **What college football games are live right now?**
     - Calls: `find_games(league: ncaaf, live: true)`.

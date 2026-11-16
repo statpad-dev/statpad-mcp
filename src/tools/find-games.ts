@@ -83,7 +83,7 @@ export const findGames = defineTool({
   name: 'find_games',
   title: 'Find games',
   description:
-    'List one league\'s games, with ids, status, start time, teams and scores. Pass exactly one of: date, a schedule day in tz as YYYY-MM-DD, today, yesterday or tomorrow; from and to, ISO 8601 datetimes at most 31 days apart; or live: true, which reads yesterday and today in tz and keeps the games in progress, at halftime or delayed, so a game that runs past midnight still shows. team narrows the list to one team. Statpad lists a game about 10 minutes before it starts, so a day that hasn\'t started yet usually comes back empty, which doesn\'t mean nothing is scheduled.',
+    'List one league\'s games, with ids, status, start time, teams and scores. Pass exactly one of: date, a schedule day in tz as YYYY-MM-DD, today, yesterday or tomorrow; from and to, ISO 8601 datetimes at most 31 days apart; or live: true, which reads yesterday and today in tz and keeps the games in progress, at halftime or delayed, so a game that runs past midnight still shows. team narrows the list to one team. Statpad lists every game the league has published with both teams known, through the end of its season.',
   input,
   output: outputSchema({
     league: z.string(),
@@ -150,7 +150,7 @@ export const findGames = defineTool({
       if (upcoming) {
         return {
           ...result,
-          note: "Statpad lists a game about 10 minutes before it starts, so an empty list for a day that hasn't finished doesn't mean nothing is scheduled.",
+          note: "Statpad lists every game the league has published with both teams known, so either nothing is scheduled then yet, or those games' teams aren't known yet.",
         };
       }
     }

@@ -165,7 +165,7 @@
   {
     "name": "find_games",
     "title": "Find games",
-    "description": "List one league's games, with ids, status, start time, teams and scores. Pass exactly one of: date, a schedule day in tz as YYYY-MM-DD, today, yesterday or tomorrow; from and to, ISO 8601 datetimes at most 31 days apart; or live: true, which reads yesterday and today in tz and keeps the games in progress, at halftime or delayed, so a game that runs past midnight still shows. team narrows the list to one team. Statpad lists a game about 10 minutes before it starts, so a day that hasn't started yet usually comes back empty, which doesn't mean nothing is scheduled.",
+    "description": "List one league's games, with ids, status, start time, teams and scores. Pass exactly one of: date, a schedule day in tz as YYYY-MM-DD, today, yesterday or tomorrow; from and to, ISO 8601 datetimes at most 31 days apart; or live: true, which reads yesterday and today in tz and keeps the games in progress, at halftime or delayed, so a game that runs past midnight still shows. team narrows the list to one team. Statpad lists every game the league has published with both teams known, through the end of its season.",
     "inputSchema": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
@@ -833,7 +833,7 @@
   {
     "name": "get_plays",
     "title": "Get plays",
-    "description": "Get a game's play-by-play. mode recent returns the last plays, 10 by default; scoring returns the scoring plays, up to 50; drives returns drives or at-bats with team, result, yards, points and time of possession, and basketball and soccer have none. Each play has the period, clock, team, description and the score after it. The description names the players. Every result has seq. To follow a live game, pass that seq back as after_seq to get only the plays and live-state changes since, then pass the new seq on the next call. If the stream no longer holds after_seq, the result has resync_required and a fresh seq from a new game read.",
+    "description": "Get a game's play-by-play. mode recent returns the last plays, 10 by default; scoring returns the scoring plays, up to 50; drives returns drives or at-bats with team, result, yards, points and time of possession, and basketball, hockey and soccer have none. Each play has the period, clock, team, description and the score after it. The description names the players. Every result has seq. To follow a live game, pass that seq back as after_seq to get only the plays and live-state changes since, then pass the new seq on the next call. If the stream no longer holds after_seq, the result has resync_required and a fresh seq from a new game read.",
     "inputSchema": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
