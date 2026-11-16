@@ -32,7 +32,7 @@ Not available. Say so plainly instead of guessing or using memory: standings, in
 
 Workflow. find_games returns game ids, and find_teams returns team ids. With a game id, get_game gives the score and live situation, get_plays the recent or scoring plays and the drives, and get_box_score the player stats.
 
-Dates and times. find_games reads date as a schedule day in tz, which defaults to America/New_York, and resolves today, yesterday and tomorrow in that zone. Timestamps in results are UTC unless the field is local_time. Statpad lists a game about 10 minutes before kickoff, so a future day usually comes back empty, which doesn't mean nothing is scheduled.
+Dates and times. find_games reads date as a schedule day in tz, which defaults to America/New_York, and resolves today, yesterday and tomorrow in that zone. Timestamps in results are UTC unless the field is local_time. Statpad lists every game the league has published with both teams known, through the end of its season. A game whose teams aren't known yet, such as a playoff game, isn't listed until they are.
 
 Freshness. The data is live and changes during a game, and stats can be corrected after the final whistle. When you report a live situation, give live_state.updated_at as its time. To follow a game, pass the seq of a result to get_plays as after_seq.
 

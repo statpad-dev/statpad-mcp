@@ -74,7 +74,7 @@ The server checks the key's format when it starts. If `STATPAD_API_KEY` is missi
 | `get_box_score` | Player stat lines grouped by category, filtered by team, player or category. |
 | `get_plays` | The latest plays, the scoring plays or the drives, and what changed since an earlier call. |
 
-Statpad covers the NFL, NCAA Division I FBS football and the English Premier League today. `list_leagues` returns the leagues your plan includes, and the agent checks it instead of assuming.
+Statpad covers the NFL, NBA, NHL, NCAA football and men's basketball, the Premier League, LaLiga, Bundesliga, Serie A and Ligue 1. `list_leagues` returns the leagues your plan includes, and the agent checks it instead of assuming.
 
 Ask questions in your own words, such as "What's the score of the Bills game?", "Who led the Vikings in receiving on Sunday?" or "What happened on the last drive?". The agent picks the tools.
 
@@ -90,7 +90,7 @@ Statpad doesn't serve these yet. The server's instructions list them, so the age
 - player profiles and player search
 - team totals and score by period in box scores
 
-For a team total, the agent can add up player lines, and it says when it did. Statpad started collecting each league in November 2026, so earlier games aren't there. A game appears in the schedule about 10 minutes before kickoff, so a later day's schedule is empty until then.
+For a team total, the agent can add up player lines, and it says when it did. Statpad started collecting each league in November 2026, so earlier games aren't there. Statpad lists every game the league has published with both teams known, through the end of its season, so you can ask about upcoming games too.
 
 ## Limits and budgets
 
