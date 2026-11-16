@@ -150,7 +150,7 @@ export const findGames = defineTool({
       if (upcoming) {
         return {
           ...result,
-          note: "Statpad lists every game the league has published with both teams known, so nothing is scheduled in this range yet, or its teams aren't known yet.",
+          note: "Statpad lists every game the league has published with both teams known, so either nothing is scheduled then yet, or those games' teams aren't known yet.",
         };
       }
     }

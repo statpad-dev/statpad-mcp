@@ -27,7 +27,18 @@ const CHANGES_PAGE = 500;
 const MAX_LIMIT = 50;
 
 /** The sport of each league Statpad serves, for the note on a game without drives. */
-const SPORTS: Record<string, string> = { nfl: 'football', ncaaf: 'football', epl: 'soccer', nba: 'basketball', ncaab: 'basketball' };
+const SPORTS: Record<string, string> = {
+  nfl: 'football',
+  ncaaf: 'football',
+  nba: 'basketball',
+  ncaab: 'basketball',
+  nhl: 'hockey',
+  epl: 'soccer',
+  laliga: 'soccer',
+  bundesliga: 'soccer',
+  seriea: 'soccer',
+  ligue1: 'soccer',
+};
 
 /** Statuses after which a game gets no more drives. */
 const FINISHED = new Set<GameDetail['game']['status']>(['complete', 'closed', 'cancelled']);
@@ -104,7 +115,7 @@ export const getPlays = defineTool({
   name: 'get_plays',
   title: 'Get plays',
   description:
-    "Get a game's play-by-play. mode recent returns the last plays, 10 by default; scoring returns the scoring plays, up to 50; drives returns drives or at-bats with team, result, yards, points and time of possession, and basketball and soccer have none. Each play has the period, clock, team, description and the score after it. The description names the players. Every result has seq. To follow a live game, pass that seq back as after_seq to get only the plays and live-state changes since, then pass the new seq on the next call. If the stream no longer holds after_seq, the result has resync_required and a fresh seq from a new game read.",
+    "Get a game's play-by-play. mode recent returns the last plays, 10 by default; scoring returns the scoring plays, up to 50; drives returns drives or at-bats with team, result, yards, points and time of possession, and basketball, hockey and soccer have none. Each play has the period, clock, team, description and the score after it. The description names the players. Every result has seq. To follow a live game, pass that seq back as after_seq to get only the plays and live-state changes since, then pass the new seq on the next call. If the stream no longer holds after_seq, the result has resync_required and a fresh seq from a new game read.",
   input,
   output,
   async run(args, ctx) {
@@ -197,6 +208,8 @@ function noDrivesNote(league: string, status: GameDetail['game']['status']): str
       return 'This game has no drives yet. They appear once the first drive starts.';
     case 'basketball':
       return 'Basketball has no drives, so use mode recent or scoring for this game.';
+    case 'hockey':
+      return 'Hockey has no drives, so use mode recent or scoring for this game.';
     case 'soccer':
       return 'Soccer has no drives, so use mode recent or scoring for this match.';
     default:
