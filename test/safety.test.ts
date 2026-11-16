@@ -77,7 +77,7 @@ describe('the API key', () => {
     const result = await (await open()).call('list_leagues');
     const request = result.requests[0]!;
     expect(request.headers.get('Authorization')).toBe(`Bearer ${TEST_KEY}`);
-    expect(request.headers.get('User-Agent')).toBe('statpad-mcp/0.1.1 (stdio)');
+    expect(request.headers.get('User-Agent')).toBe('statpad-mcp/0.1.2 (stdio)');
     expect(request.url).not.toContain(TEST_KEY);
   });
 
