@@ -57,10 +57,10 @@ The tests connect a real MCP client to the server in memory, and a stubbed `fetc
 
 ## Releases
 
-1. Bump `version` in `package.json`, and both `version` fields in `server.json`, to the same value.
+1. Bump the version to the same value everywhere it appears: `version` in `package.json`, the two top-level `version` fields in `package-lock.json`, both `version` fields in `server.json`, `VERSION` in `src/version.ts` and the `User-Agent` string in `test/safety.test.ts`. The tests fail if they disagree.
 2. Merge to `main`.
 3. Publish a GitHub release whose tag is that version with a `v` in front, such as `v0.1.0`.
 
 The Release workflow checks the tag against `package.json` and `server.json`, refuses `file:` dependencies, runs `npm run check`, and stages the package with `npm stage publish` through npm trusted publishing. A maintainer then approves the staged version on npmjs.com.
 
-Once that version is live on npm, run the MCP Registry workflow from the Actions tab with the release tag, or with `gh workflow run mcp-registry.yml -f tag=v0.1.0`. It checks out the tag, confirms that npm serves that version with the `mcpName` from `server.json`, and publishes `server.json` with `mcp-publisher`. It signs in with the workflow's GitHub OIDC token, because the registry only grants the `io.github.statpad-dev` namespace to statpad-dev owners, and `mcp-publisher login github` on a laptop can't read organization roles.
+Once a maintainer approves that version on npm, the MCP Registry workflow publishes it on its next successful daily run. It looks up npm's latest version, does nothing if the registry already has it, and stops without publishing if the registry answers anything other than found or not found. It only looks at npm's latest version, so if two releases reach npm between daily runs, publish the older one by its tag. To publish sooner, run it from the Actions tab, or with `gh workflow run mcp-registry.yml -f tag=v0.1.0`. It checks out the tag, confirms that npm serves that version with the `mcpName` from `server.json`, and publishes `server.json` with `mcp-publisher`. It signs in with the workflow's GitHub OIDC token, because the registry only grants the `io.github.statpad-dev` namespace to statpad-dev owners, and `mcp-publisher login github` on a laptop can't read organization roles.
