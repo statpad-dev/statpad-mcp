@@ -10,6 +10,7 @@ These files are copied unchanged from the public samples listed at https://statp
 - `leagues.json` is `GET /v1/leagues`.
 - `nfl-bills-at-vikings/` is Bills at Vikings on November 9, 2026, a final with 187 plays and 68 players in the box score. It has `game.json`, `game-live.json` with the same game in the fourth quarter, `plays.json`, `play-groups.json`, `boxscore.json`, `roster.json` and `changes.ndjson`, the game's full change stream of 1,260 changes.
 - `epl-man-utd-aston-villa/` is Aston Villa at Manchester United on November 8, 2026. It has `game.json`, `plays.json`, `boxscore.json` and `roster.json`.
+- `nhl-panthers-at-capitals/` is Florida at Washington on November 7, 2026, a final, 3 to 4, with 36 skaters and 2 goalies in the box score. It has `game.json`, `plays.json`, `boxscore.json` and `roster.json`.
 
 To refresh them, download each file again from `https://statpad.dev/samples/<dir>/<file>` and rerun the tests. The tests assert real values from these games, so new samples need new assertions.
 

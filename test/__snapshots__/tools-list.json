@@ -349,7 +349,7 @@
   {
     "name": "get_game",
     "title": "Get a game",
-    "description": "Get one game's status, score and live situation: period, clock, possession and the sport's details, such as down and distance in football, timeouts and fouls in basketball, or the minute and red cards in soccer. live_state.updated_at says how fresh it is. Also returns the teams, the venue and seq, the game's change-stream position, which get_plays takes as after_seq. started_at and ended_at aren't filled yet, so use status. Score by period is left out until Statpad fills it.",
+    "description": "Get one game's status, score and live situation: period, clock, possession and the sport's details, such as down and distance in football, timeouts and fouls in basketball, the shootout score in hockey, or the minute and red cards in soccer. live_state.updated_at says how fresh it is. Also returns the teams, the venue and seq, the game's change-stream position, which get_plays takes as after_seq. started_at and ended_at aren't filled yet, so use status. Score by period is left out until Statpad fills it.",
     "inputSchema": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
@@ -542,6 +542,24 @@
                 ]
               }
             },
+            "hockey": {
+              "description": "Shootout goals, once a shootout starts.",
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string",
+                    "description": "A value Statpad defines as text."
+                  }
+                ]
+              }
+            },
             "updated_at": {
               "type": "string",
               "description": "When Statpad last updated the live state. Quote it as the freshness of the data."
@@ -624,7 +642,7 @@
   {
     "name": "get_box_score",
     "title": "Get a box score",
-    "description": "Get the player stat lines of one game, grouped by stat category, with player names and teams. Filter with team, an id or abbreviation; player, part of a name, ignoring accents; and category, such as passing, rushing, receiving, defensive, interceptions, fumbles, kicking, punting, kick_returns, punt_returns, soccer, basketball. With no filter on a big game it returns the top lines of each category, sets truncated and says how to see the rest. Statpad doesn't fill team totals or score by period yet. For a team total, add up that team's player lines for the category, and say the total is summed from player lines.",
+    "description": "Get the player stat lines of one game, grouped by stat category, with player names and teams. Filter with team, an id or abbreviation; player, part of a name, ignoring accents; and category, such as passing, rushing, receiving, defensive, interceptions, fumbles, kicking, punting, kick_returns, punt_returns, soccer, basketball, skaters, goalies. With no filter on a big game it returns the top lines of each category, sets truncated and says how to see the rest. Statpad doesn't fill team totals or score by period yet. For a team total, add up that team's player lines for the category, and say the total is summed from player lines.",
     "inputSchema": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
@@ -653,7 +671,7 @@
           "maxLength": 100
         },
         "category": {
-          "description": "Only this stat category, such as passing, rushing, receiving, defensive, interceptions, fumbles, kicking, punting, kick_returns, punt_returns, soccer, basketball.",
+          "description": "Only this stat category, such as passing, rushing, receiving, defensive, interceptions, fumbles, kicking, punting, kick_returns, punt_returns, soccer, basketball, skaters, goalies.",
           "type": "string",
           "pattern": "^[a-z_]+$"
         }
@@ -1119,6 +1137,24 @@
             },
             "basketball": {
               "description": "Timeouts and fouls.",
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string",
+                    "description": "A value Statpad defines as text."
+                  }
+                ]
+              }
+            },
+            "hockey": {
+              "description": "Shootout goals, once a shootout starts.",
               "type": "object",
               "propertyNames": {
                 "type": "string"

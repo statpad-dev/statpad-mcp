@@ -60,6 +60,7 @@ export const liveStateSchema = z.object({
   football: z.record(z.string(), scalar).optional().describe('Down, distance, yard line and timeouts.'),
   soccer: z.record(z.string(), scalar).optional().describe('Minute, stoppage time, formations, red cards and shoot-out score.'),
   basketball: z.record(z.string(), scalar).optional().describe('Timeouts and fouls.'),
+  hockey: z.record(z.string(), scalar).optional().describe('Shootout goals, once a shootout starts.'),
   updated_at: z.string().describe('When Statpad last updated the live state. Quote it as the freshness of the data.'),
 });
 
@@ -110,12 +111,15 @@ export function liveStateView(state: LiveState, teams: TeamIndex): z.output<type
     football: situation(state.football),
     soccer: situation(state.soccer),
     basketball: situation(state.basketball),
+    hockey: situation(state.hockey),
     updated_at: state.updated_at,
   });
 }
 
-function situation(block: object | null): Record<string, number | string> | undefined {
-  return block ? (dropNulls(block) as Record<string, number | string>) : undefined;
+function situation(block: object | null | undefined): Record<string, number | string> | undefined {
+  if (!block) return undefined;
+  const filled = dropNulls(block) as Record<string, number | string>;
+  return Object.keys(filled).length > 0 ? filled : undefined;
 }
 
 /** A play as the model reads it: when, who, what, and the score after it. */

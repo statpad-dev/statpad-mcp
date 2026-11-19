@@ -1,0 +1,1130 @@
+{
+  "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+  "period_scores": [],
+  "players": [
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a5a-824c-fbcae3327e06",
+      "stats": {
+        "skaters": {
+          "hits": 2,
+          "goals": 1,
+          "shifts": 21,
+          "assists": 0,
+          "giveaways": 3,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": 0,
+          "faceoff_pct": 61.9,
+          "time_on_ice": 1123,
+          "faceoffs_won": 13,
+          "missed_shots": 1,
+          "blocked_shots": 1,
+          "faceoffs_lost": 8,
+          "shots_on_goal": 3,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 151,
+          "short_handed_time_on_ice": 38,
+          "even_strength_time_on_ice": 934
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a5f-bf3d-c9c03b64e18d",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 18,
+          "assists": 0,
+          "giveaways": 1,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": 0,
+          "faceoff_pct": 44.4,
+          "time_on_ice": 971,
+          "faceoffs_won": 4,
+          "missed_shots": 1,
+          "blocked_shots": 0,
+          "faceoffs_lost": 5,
+          "shots_on_goal": 1,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 118,
+          "short_handed_time_on_ice": 215,
+          "even_strength_time_on_ice": 638
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a63-a81e-db7514ddeced",
+      "stats": {
+        "skaters": {
+          "hits": 6,
+          "goals": 0,
+          "shifts": 12,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 0,
+          "takeaways": 1,
+          "plus_minus": 0,
+          "faceoff_pct": 0,
+          "time_on_ice": 608,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 2,
+          "faceoffs_lost": 1,
+          "shots_on_goal": 0,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 4,
+          "short_handed_time_on_ice": 122,
+          "even_strength_time_on_ice": 482
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a67-a159-fb8d46221ad6",
+      "stats": {
+        "skaters": {
+          "hits": 3,
+          "goals": 0,
+          "shifts": 6,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 0,
+          "time_on_ice": 313,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 1,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 1,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 4,
+          "short_handed_time_on_ice": 0,
+          "even_strength_time_on_ice": 309
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a6b-8899-056ca05e8926",
+      "stats": {
+        "skaters": {
+          "hits": 1,
+          "goals": 0,
+          "shifts": 20,
+          "assists": 0,
+          "giveaways": 1,
+          "penalties": 0,
+          "takeaways": 1,
+          "plus_minus": 0,
+          "faceoff_pct": 50,
+          "time_on_ice": 998,
+          "faceoffs_won": 1,
+          "missed_shots": 1,
+          "blocked_shots": 2,
+          "faceoffs_lost": 1,
+          "shots_on_goal": 1,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 106,
+          "short_handed_time_on_ice": 115,
+          "even_strength_time_on_ice": 777
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a70-b482-b210636053c4",
+      "stats": {
+        "skaters": {
+          "hits": 4,
+          "goals": 0,
+          "shifts": 15,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 0,
+          "takeaways": 2,
+          "plus_minus": 0,
+          "faceoff_pct": 0,
+          "time_on_ice": 779,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 0,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 3,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 0,
+          "short_handed_time_on_ice": 0,
+          "even_strength_time_on_ice": 779
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a74-8ae3-101dc87454b3",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 24,
+          "assists": 1,
+          "giveaways": 2,
+          "penalties": 1,
+          "takeaways": 1,
+          "plus_minus": -2,
+          "faceoff_pct": 40,
+          "time_on_ice": 1485,
+          "faceoffs_won": 4,
+          "missed_shots": 0,
+          "blocked_shots": 0,
+          "faceoffs_lost": 6,
+          "shots_on_goal": 2,
+          "shootout_goals": 0,
+          "penalty_minutes": 2,
+          "power_play_time_on_ice": 492,
+          "short_handed_time_on_ice": 123,
+          "even_strength_time_on_ice": 870
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a78-b52d-de0721fa37e8",
+      "stats": {
+        "skaters": {
+          "hits": 2,
+          "goals": 0,
+          "shifts": 12,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 50,
+          "time_on_ice": 504,
+          "faceoffs_won": 2,
+          "missed_shots": 0,
+          "blocked_shots": 0,
+          "faceoffs_lost": 2,
+          "shots_on_goal": 0,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 4,
+          "short_handed_time_on_ice": 26,
+          "even_strength_time_on_ice": 474
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a7c-9d19-62cfca700356",
+      "stats": {
+        "skaters": {
+          "hits": 2,
+          "goals": 0,
+          "shifts": 23,
+          "assists": 3,
+          "giveaways": 1,
+          "penalties": 1,
+          "takeaways": 1,
+          "plus_minus": 1,
+          "faceoff_pct": 0,
+          "time_on_ice": 1435,
+          "faceoffs_won": 0,
+          "missed_shots": 1,
+          "blocked_shots": 0,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 3,
+          "shootout_goals": 0,
+          "penalty_minutes": 2,
+          "power_play_time_on_ice": 485,
+          "short_handed_time_on_ice": 7,
+          "even_strength_time_on_ice": 943
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a80-8ad5-9ba4f7e298d0",
+      "stats": {
+        "skaters": {
+          "hits": 3,
+          "goals": 2,
+          "shifts": 22,
+          "assists": 0,
+          "giveaways": 2,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": 1,
+          "faceoff_pct": 42.9,
+          "time_on_ice": 1289,
+          "faceoffs_won": 3,
+          "missed_shots": 2,
+          "blocked_shots": 0,
+          "faceoffs_lost": 4,
+          "shots_on_goal": 7,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 491,
+          "short_handed_time_on_ice": 0,
+          "even_strength_time_on_ice": 798
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a84-a12e-bb45b7e6a2c3",
+      "stats": {
+        "skaters": {
+          "hits": 3,
+          "goals": 0,
+          "shifts": 21,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 1,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 100,
+          "time_on_ice": 1282,
+          "faceoffs_won": 2,
+          "missed_shots": 2,
+          "blocked_shots": 1,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 2,
+          "shootout_goals": 0,
+          "penalty_minutes": 2,
+          "power_play_time_on_ice": 448,
+          "short_handed_time_on_ice": 0,
+          "even_strength_time_on_ice": 834
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a88-817d-f4ca4a52f773",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 4,
+          "assists": 0,
+          "giveaways": 1,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 0,
+          "time_on_ice": 127,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 1,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 0,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 0,
+          "short_handed_time_on_ice": 0,
+          "even_strength_time_on_ice": 127
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a8c-952f-eb6e326d5b8b",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 19,
+          "assists": 0,
+          "giveaways": 2,
+          "penalties": 1,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 0,
+          "time_on_ice": 802,
+          "faceoffs_won": 0,
+          "missed_shots": 1,
+          "blocked_shots": 0,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 1,
+          "shootout_goals": 0,
+          "penalty_minutes": 2,
+          "power_play_time_on_ice": 134,
+          "short_handed_time_on_ice": 0,
+          "even_strength_time_on_ice": 668
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a90-8c04-b5970bbf3142",
+      "stats": {
+        "skaters": {
+          "hits": 1,
+          "goals": 0,
+          "shifts": 25,
+          "assists": 0,
+          "giveaways": 1,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 0,
+          "time_on_ice": 1336,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 3,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 3,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 172,
+          "short_handed_time_on_ice": 132,
+          "even_strength_time_on_ice": 1032
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a94-89a6-426927c7e0c4",
+      "stats": {
+        "skaters": {
+          "hits": 1,
+          "goals": 0,
+          "shifts": 23,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 0,
+          "time_on_ice": 1153,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 1,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 1,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 21,
+          "short_handed_time_on_ice": 129,
+          "even_strength_time_on_ice": 1003
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a98-a3f0-5befc2db1da5",
+      "stats": {
+        "skaters": {
+          "hits": 2,
+          "goals": 0,
+          "shifts": 26,
+          "assists": 1,
+          "giveaways": 2,
+          "penalties": 0,
+          "takeaways": 1,
+          "plus_minus": 0,
+          "faceoff_pct": 0,
+          "time_on_ice": 1591,
+          "faceoffs_won": 0,
+          "missed_shots": 3,
+          "blocked_shots": 1,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 1,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 486,
+          "short_handed_time_on_ice": 196,
+          "even_strength_time_on_ice": 909
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7a9c-a170-dba5ccfea994",
+      "stats": {
+        "skaters": {
+          "hits": 1,
+          "goals": 0,
+          "shifts": 16,
+          "assists": 0,
+          "giveaways": 1,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 0,
+          "time_on_ice": 722,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 0,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 0,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 0,
+          "short_handed_time_on_ice": 5,
+          "even_strength_time_on_ice": 717
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7aa0-9c29-251b58934025",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 20,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 0,
+          "time_on_ice": 1063,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 0,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 0,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 4,
+          "short_handed_time_on_ice": 188,
+          "even_strength_time_on_ice": 871
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7aa4-b930-95f351f904f5",
+      "stats": {
+        "goalies": {
+          "saves": 27,
+          "save_pct": 0.871,
+          "time_on_ice": 3539,
+          "goals_against": 4,
+          "shots_against": 31,
+          "shootout_saves": 0,
+          "penalty_minutes": 0,
+          "power_play_saves": 5,
+          "short_handed_saves": 2,
+          "even_strength_saves": 20,
+          "shootout_shots_against": 0
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7aa8-aee8-da5164c17c3a",
+      "stats": {
+        "skaters": {
+          "hits": 1,
+          "goals": 0,
+          "shifts": 17,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 0,
+          "time_on_ice": 830,
+          "faceoffs_won": 0,
+          "missed_shots": 1,
+          "blocked_shots": 0,
+          "faceoffs_lost": 1,
+          "shots_on_goal": 0,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 0,
+          "short_handed_time_on_ice": 106,
+          "even_strength_time_on_ice": 724
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7aac-8142-8e1187fb15d0",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 1,
+          "shifts": 21,
+          "assists": 1,
+          "giveaways": 1,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": 3,
+          "faceoff_pct": 43.8,
+          "time_on_ice": 915,
+          "faceoffs_won": 7,
+          "missed_shots": 0,
+          "blocked_shots": 0,
+          "faceoffs_lost": 9,
+          "shots_on_goal": 3,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 112,
+          "short_handed_time_on_ice": 4,
+          "even_strength_time_on_ice": 799
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7ab0-8896-927599401235",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 20,
+          "assists": 0,
+          "giveaways": 1,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": 0,
+          "faceoff_pct": 63.6,
+          "time_on_ice": 882,
+          "faceoffs_won": 7,
+          "missed_shots": 0,
+          "blocked_shots": 0,
+          "faceoffs_lost": 4,
+          "shots_on_goal": 4,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 0,
+          "short_handed_time_on_ice": 366,
+          "even_strength_time_on_ice": 516
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7ab4-9279-150ea8e3a4d3",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 19,
+          "assists": 0,
+          "giveaways": 1,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 0,
+          "time_on_ice": 998,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 0,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 1,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 216,
+          "short_handed_time_on_ice": 4,
+          "even_strength_time_on_ice": 778
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7ab8-acf2-ee70c37409cf",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 20,
+          "assists": 1,
+          "giveaways": 1,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": 2,
+          "faceoff_pct": 0,
+          "time_on_ice": 872,
+          "faceoffs_won": 0,
+          "missed_shots": 2,
+          "blocked_shots": 1,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 3,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 103,
+          "short_handed_time_on_ice": 0,
+          "even_strength_time_on_ice": 769
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7abc-afa3-762441b0cc8e",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 15,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": 0,
+          "faceoff_pct": 0,
+          "time_on_ice": 856,
+          "faceoffs_won": 0,
+          "missed_shots": 4,
+          "blocked_shots": 0,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 3,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 228,
+          "short_handed_time_on_ice": 0,
+          "even_strength_time_on_ice": 628
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7ac0-894b-32d35df9d757",
+      "stats": {
+        "skaters": {
+          "hits": 1,
+          "goals": 1,
+          "shifts": 25,
+          "assists": 1,
+          "giveaways": 3,
+          "penalties": 0,
+          "takeaways": 1,
+          "plus_minus": 3,
+          "faceoff_pct": 0,
+          "time_on_ice": 944,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 0,
+          "faceoffs_lost": 1,
+          "shots_on_goal": 2,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 0,
+          "short_handed_time_on_ice": 221,
+          "even_strength_time_on_ice": 723
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7ac3-b6d4-460931cdf900",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 11,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 0,
+          "takeaways": 1,
+          "plus_minus": 1,
+          "faceoff_pct": 0,
+          "time_on_ice": 384,
+          "faceoffs_won": 0,
+          "missed_shots": 1,
+          "blocked_shots": 0,
+          "faceoffs_lost": 1,
+          "shots_on_goal": 1,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 96,
+          "short_handed_time_on_ice": 0,
+          "even_strength_time_on_ice": 288
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7aca-ac30-5c9f1edf07d4",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 19,
+          "assists": 0,
+          "giveaways": 3,
+          "penalties": 0,
+          "takeaways": 2,
+          "plus_minus": 0,
+          "faceoff_pct": 60,
+          "time_on_ice": 970,
+          "faceoffs_won": 3,
+          "missed_shots": 2,
+          "blocked_shots": 1,
+          "faceoffs_lost": 2,
+          "shots_on_goal": 1,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 143,
+          "short_handed_time_on_ice": 197,
+          "even_strength_time_on_ice": 630
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7ace-8d13-1143ff787ffb",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 20,
+          "assists": 0,
+          "giveaways": 2,
+          "penalties": 0,
+          "takeaways": 1,
+          "plus_minus": -1,
+          "faceoff_pct": 44.4,
+          "time_on_ice": 1079,
+          "faceoffs_won": 8,
+          "missed_shots": 1,
+          "blocked_shots": 1,
+          "faceoffs_lost": 10,
+          "shots_on_goal": 3,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 213,
+          "short_handed_time_on_ice": 0,
+          "even_strength_time_on_ice": 866
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7ad2-850c-82f129e7ee93",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 1,
+          "shifts": 27,
+          "assists": 0,
+          "giveaways": 2,
+          "penalties": 0,
+          "takeaways": 1,
+          "plus_minus": -1,
+          "faceoff_pct": 66.7,
+          "time_on_ice": 1441,
+          "faceoffs_won": 2,
+          "missed_shots": 2,
+          "blocked_shots": 1,
+          "faceoffs_lost": 1,
+          "shots_on_goal": 3,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 136,
+          "short_handed_time_on_ice": 350,
+          "even_strength_time_on_ice": 955
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7ad6-8bb4-00c9639bcd68",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 4,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 2,
+          "takeaways": 0,
+          "plus_minus": 1,
+          "faceoff_pct": 0,
+          "time_on_ice": 133,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 0,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 0,
+          "shootout_goals": 0,
+          "penalty_minutes": 15,
+          "power_play_time_on_ice": 39,
+          "short_handed_time_on_ice": 0,
+          "even_strength_time_on_ice": 94
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7ada-8e51-81b7b6c790fa",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 25,
+          "assists": 0,
+          "giveaways": 1,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": 2,
+          "faceoff_pct": 0,
+          "time_on_ice": 1317,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 2,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 2,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 183,
+          "short_handed_time_on_ice": 208,
+          "even_strength_time_on_ice": 926
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7aec-ac10-d4987b85d0be",
+      "stats": {
+        "skaters": {
+          "hits": 2,
+          "goals": 0,
+          "shifts": 25,
+          "assists": 0,
+          "giveaways": 3,
+          "penalties": 1,
+          "takeaways": 0,
+          "plus_minus": -1,
+          "faceoff_pct": 0,
+          "time_on_ice": 1355,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 3,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 0,
+          "shootout_goals": 0,
+          "penalty_minutes": 2,
+          "power_play_time_on_ice": 0,
+          "short_handed_time_on_ice": 419,
+          "even_strength_time_on_ice": 936
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7af0-90fd-f48ce7c13b88",
+      "stats": {
+        "skaters": {
+          "hits": 1,
+          "goals": 0,
+          "shifts": 23,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 2,
+          "takeaways": 0,
+          "plus_minus": 1,
+          "faceoff_pct": 0,
+          "time_on_ice": 979,
+          "faceoffs_won": 0,
+          "missed_shots": 1,
+          "blocked_shots": 1,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 2,
+          "shootout_goals": 0,
+          "penalty_minutes": 4,
+          "power_play_time_on_ice": 145,
+          "short_handed_time_on_ice": 4,
+          "even_strength_time_on_ice": 830
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7af3-aadd-774c2dd92a66",
+      "stats": {
+        "skaters": {
+          "hits": 0,
+          "goals": 0,
+          "shifts": 19,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": 0,
+          "faceoff_pct": 0,
+          "time_on_ice": 957,
+          "faceoffs_won": 0,
+          "missed_shots": 1,
+          "blocked_shots": 2,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 0,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 0,
+          "short_handed_time_on_ice": 320,
+          "even_strength_time_on_ice": 637
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7af7-9023-118702d2ff8a",
+      "stats": {
+        "skaters": {
+          "hits": 2,
+          "goals": 0,
+          "shifts": 27,
+          "assists": 0,
+          "giveaways": 0,
+          "penalties": 1,
+          "takeaways": 0,
+          "plus_minus": 1,
+          "faceoff_pct": 0,
+          "time_on_ice": 1478,
+          "faceoffs_won": 0,
+          "missed_shots": 0,
+          "blocked_shots": 0,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 1,
+          "shootout_goals": 0,
+          "penalty_minutes": 2,
+          "power_play_time_on_ice": 6,
+          "short_handed_time_on_ice": 293,
+          "even_strength_time_on_ice": 1179
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7afc-8ac1-b7595659afe6",
+      "stats": {
+        "skaters": {
+          "hits": 1,
+          "goals": 1,
+          "shifts": 17,
+          "assists": 0,
+          "giveaways": 1,
+          "penalties": 0,
+          "takeaways": 0,
+          "plus_minus": 1,
+          "faceoff_pct": 0,
+          "time_on_ice": 830,
+          "faceoffs_won": 0,
+          "missed_shots": 1,
+          "blocked_shots": 3,
+          "faceoffs_lost": 0,
+          "shots_on_goal": 2,
+          "shootout_goals": 0,
+          "penalty_minutes": 0,
+          "power_play_time_on_ice": 0,
+          "short_handed_time_on_ice": 4,
+          "even_strength_time_on_ice": 826
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    },
+    {
+      "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+      "player_id": "01a1e5f6-713e-7b00-ba4f-fb19fdf8b4f9",
+      "stats": {
+        "goalies": {
+          "saves": 26,
+          "save_pct": 0.897,
+          "time_on_ice": 3600,
+          "goals_against": 3,
+          "shots_against": 29,
+          "shootout_saves": 0,
+          "penalty_minutes": 0,
+          "power_play_saves": 11,
+          "short_handed_saves": 0,
+          "even_strength_saves": 15,
+          "shootout_shots_against": 0
+        }
+      },
+      "team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+      "version": 1
+    }
+  ],
+  "seq": 411,
+  "teams": []
+}

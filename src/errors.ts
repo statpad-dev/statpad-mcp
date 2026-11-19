@@ -44,6 +44,13 @@ export function describeError(error: unknown, ctx: CallContext | undefined, leag
 
 function describeStatpadError(error: StatpadError, league: string | undefined): ToolErrorBody {
   const base = { detail: error.detail, request_id: error.requestId };
+  if (error.status >= 200 && error.status < 300) {
+    return {
+      error: 'internal',
+      message: "Something other than Statpad answered, such as a proxy or a Wi-Fi sign-in page, so statpad-mcp couldn't read the result. Tell the user to check their connection, then try again.",
+      ...base,
+    };
+  }
   switch (error.code) {
     case 'unauthorized':
       return {

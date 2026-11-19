@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 
 import { MAX_TOKENS, TARGET_TOKENS } from '../src/output.js';
 import { connect, type Harness, type HarnessOptions } from './helpers/harness.js';
-import { EPL_GAME, fixture, json, NBA_GAME, NCAAF_GAME, NFL_GAME } from './helpers/stub.js';
+import { EPL_GAME, fixture, json, NBA_GAME, NCAAF_GAME, NFL_GAME, NHL_GAME } from './helpers/stub.js';
 
 let h: Harness | undefined;
 async function open(options: HarnessOptions = {}): Promise<Harness> {
@@ -141,6 +141,21 @@ describe('get_game', () => {
       seq: 511,
     });
   });
+
+  it('leaves out a hockey situation with nothing in it', async () => {
+    const result = await (await open()).call('get_game', { league: 'nhl', game_id: NHL_GAME });
+    expect(result.json).toMatchObject({ status: 'complete', away: { alias: 'FLA' }, home: { alias: 'WSH' }, away_score: 3, home_score: 4 });
+    expect(result.json.live_state).not.toHaveProperty('hockey');
+  });
+
+  it('returns the hockey shootout score', async () => {
+    const detail = fixture<{ live_state: Record<string, unknown> }>('nhl-panthers-at-capitals/game.json');
+    detail.live_state = { ...detail.live_state, period: 5, hockey: { home_shootout: 1, away_shootout: 2 } };
+    const result = await (
+      await open({ override: (url) => (url.pathname.endsWith(`/games/${NHL_GAME}`) ? json(detail) : undefined) })
+    ).call('get_game', { league: 'nhl', game_id: NHL_GAME });
+    expect(result.json.live_state.hockey).toEqual({ home_shootout: 1, away_shootout: 2 });
+  });
 });
 
 describe('get_box_score', () => {
@@ -197,6 +212,18 @@ describe('get_box_score', () => {
     ]);
     const points = lines.map((line) => line.stats.points);
     expect(points).toEqual([...points].sort((a, b) => b - a));
+  });
+
+  it('ranks hockey skaters by goals and goalies by saves', async () => {
+    const result = await (await open()).call('get_box_score', { league: 'nhl', game_id: NHL_GAME });
+    expect(result.tokens).toBeLessThanOrEqual(MAX_TOKENS);
+    expect(Object.keys(result.json.categories)).toEqual(['skaters', 'goalies']);
+    const skaters = result.json.categories.skaters as { stats: { goals: number; assists: number } }[];
+    expect(skaters[0]).toMatchObject({ stats: { goals: 2, assists: 0, shots_on_goal: 7 } });
+    const goals = skaters.map((line) => line.stats.goals);
+    expect(goals).toEqual([...goals].sort((a, b) => b - a));
+    const goalies = result.json.categories.goalies as { stats: { saves: number } }[];
+    expect(goalies.map((line) => line.stats.saves)).toEqual([27, 26]);
   });
 
   it('breaks basketball ties by rebounds, then assists', async () => {
