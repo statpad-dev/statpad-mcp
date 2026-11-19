@@ -9,6 +9,7 @@ export const TEST_KEY = 'sporty_AbCdEfGhIjKlMnOp.QRSTUVWXYZabcdefghijklmnopqrstu
 export const NFL_GAME = '01a1cca4-3e00-7e94-bcef-b47bbed025f0';
 export const EPL_GAME = '01a1cca4-bb93-77d8-8fd9-e865faca45b5';
 export const NBA_GAME = '01a1cc95-20c8-7721-84c6-e62c8742d14f';
+export const NHL_GAME = '01a1e5f6-713e-7a47-b1d5-dbb74e828b61';
 export const NCAAF_GAME = '01a1b987-64e7-74e3-8db1-b939d352190d';
 export const JAX_AT_BAL = '01a1b987-644f-7459-b8e0-810b314f71da';
 export const BILLS = '01a1cca4-3e05-7c90-a80f-05893446d191';
@@ -26,9 +27,10 @@ const SAMPLES: Record<string, Sample> = {
   [NFL_GAME]: { dir: 'nfl-bills-at-vikings', league: 'nfl' },
   [EPL_GAME]: { dir: 'epl-man-utd-aston-villa', league: 'epl' },
   [NBA_GAME]: { dir: 'nba-bucks-at-knicks', league: 'nba' },
+  [NHL_GAME]: { dir: 'nhl-panthers-at-capitals', league: 'nhl' },
 };
 
-const LIVE_LEAGUES = new Set(['nfl', 'ncaaf', 'epl', 'nba']);
+const LIVE_LEAGUES = new Set(['nfl', 'ncaaf', 'epl', 'nba', 'nhl']);
 
 /** The game reads the stub serves: the samples and the getGame example from api/openapi.yaml. */
 function gameDetails(live: boolean): Map<string, GameDetail> {
@@ -36,6 +38,7 @@ function gameDetails(live: boolean): Map<string, GameDetail> {
   details.set(NFL_GAME, fixture<GameDetail>(`nfl-bills-at-vikings/${live ? 'game-live' : 'game'}.json`));
   details.set(EPL_GAME, fixture<GameDetail>('epl-man-utd-aston-villa/game.json'));
   details.set(NBA_GAME, fixture<GameDetail>('nba-bucks-at-knicks/game.json'));
+  details.set(NHL_GAME, fixture<GameDetail>('nhl-panthers-at-capitals/game.json'));
   details.set(NCAAF_GAME, fixture<GameDetail>('openapi/getGame.json'));
   return details;
 }
@@ -52,6 +55,7 @@ function leagueData(details: Map<string, GameDetail>): Record<string, { games: G
   const epl = details.get(EPL_GAME)!;
   const ncaaf = details.get(NCAAF_GAME)!;
   const nba = details.get(NBA_GAME)!;
+  const nhl = details.get(NHL_GAME)!;
   const byMarket = (a: Team, b: Team) => a.market.localeCompare(b.market) || a.name.localeCompare(b.name);
   const unique = (teams: Team[]) => [...new Map(teams.map((team) => [team.id, team])).values()].sort(byMarket);
   return {
@@ -59,6 +63,7 @@ function leagueData(details: Map<string, GameDetail>): Record<string, { games: G
     ncaaf: { games: [ncaaf.game], teams: unique([ncaaf.away_team, ncaaf.home_team]) },
     epl: { games: [epl.game], teams: unique([epl.away_team, epl.home_team]) },
     nba: { games: [nba.game], teams: unique([nba.away_team, nba.home_team]) },
+    nhl: { games: [nhl.game], teams: unique([nhl.away_team, nhl.home_team]) },
   };
 }
 

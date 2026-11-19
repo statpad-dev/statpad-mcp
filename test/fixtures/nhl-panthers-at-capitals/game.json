@@ -1,0 +1,81 @@
+{
+  "away_team": {
+    "active": true,
+    "alias": "FLA",
+    "id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+    "league": "nhl",
+    "market": "Florida",
+    "name": "Panthers",
+    "updated_at": "2026-11-16T20:04:55.740953Z",
+    "venue_id": null,
+    "version": 1
+  },
+  "game": {
+    "attendance": null,
+    "away_score": 3,
+    "away_team_id": "01a1e5f6-713e-7a52-920b-26f20525ffbc",
+    "coverage": "full",
+    "ended_at": "2026-11-07T20:12:01Z",
+    "game_type": "regular",
+    "home_score": 4,
+    "home_team_id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+    "id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+    "league": "nhl",
+    "neutral_site": false,
+    "rescheduled_from_id": null,
+    "scheduled_at": "2026-11-07T17:30:00Z",
+    "season_id": "01a1e5f6-7145-797b-a472-d88f0c7134cd",
+    "started_at": "2026-11-07T17:38:23Z",
+    "status": "complete",
+    "title": null,
+    "updated_at": "2026-11-16T20:04:55.740953Z",
+    "venue_id": "01a1e5f6-713e-7a56-b8dc-c9891bc26159",
+    "version": 1,
+    "week_id": null
+  },
+  "home_team": {
+    "active": true,
+    "alias": "WSH",
+    "id": "01a1e5f6-713e-7a4d-9388-212f2351fc48",
+    "league": "nhl",
+    "market": "Washington",
+    "name": "Capitals",
+    "updated_at": "2026-11-16T20:04:55.740953Z",
+    "venue_id": null,
+    "version": 1
+  },
+  "live_state": {
+    "away_score": 3,
+    "basketball": null,
+    "clock_running": null,
+    "clock_seconds": 0,
+    "football": null,
+    "game_id": "01a1e5f6-713e-7a47-b1d5-dbb74e828b61",
+    "hockey": {
+      "away_shootout": null,
+      "home_shootout": null
+    },
+    "home_score": 4,
+    "last_play_id": "01a1e5f6-713f-70f3-8b86-a09877b26e1d",
+    "period": 3,
+    "period_half": null,
+    "possession_team_id": null,
+    "soccer": null,
+    "updated_at": "2026-11-16T20:04:55.740953Z",
+    "version": 1
+  },
+  "period_scores": [],
+  "seq": 411,
+  "venue": {
+    "capacity": null,
+    "city": "Washington",
+    "country": null,
+    "id": "01a1e5f6-713e-7a56-b8dc-c9891bc26159",
+    "name": "Capital One Arena",
+    "roof_type": null,
+    "state": "DC",
+    "surface": null,
+    "timezone": null,
+    "version": 1
+  }
+}

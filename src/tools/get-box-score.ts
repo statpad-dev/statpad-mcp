@@ -20,6 +20,8 @@ const RANK_BY: Record<string, string[]> = {
   punt_returns: ['yards', 'returns'],
   soccer: ['total_goals', 'goal_assists', 'saves', 'shots_on_target', 'total_shots'],
   basketball: ['points', 'rebounds', 'assists'],
+  skaters: ['goals', 'assists', 'shots_on_goal'],
+  goalies: ['saves', 'shots_against'],
 };
 
 const KNOWN_CATEGORIES = Object.keys(RANK_BY);
